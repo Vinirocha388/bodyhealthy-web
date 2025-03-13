@@ -1,0 +1,27 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #161A1D;
+    color: #f1f0f0;
+}
+
+/* Fonte Catamaran */
+.logoText {
+    font-weight: bold;
+    font-size: 48;
+}
+
+.mainNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+}
+
+/* Fonte Assistant  */
+.navLink {
+    font-weight: bold;
+    font-size: 31;
+}
