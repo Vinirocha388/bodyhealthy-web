@@ -5,12 +5,14 @@
     padding: 1rem 0;
     background-color: #161A1D;
     color: #f1f0f0;
+    width: 100%;
+    height: 83px;
 }
 
 /* Fonte Catamaran */
 .logoText {
     font-weight: bold;
-    font-size: 48;
+    font-size: 48px;
 }
 
 .mainNav {
@@ -23,5 +25,6 @@
 /* Fonte Assistant  */
 .navLink {
     font-weight: bold;
-    font-size: 31;
+    font-size: 31px;
+    text-decoration: none;
 }
