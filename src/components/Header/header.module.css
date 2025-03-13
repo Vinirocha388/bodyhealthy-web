@@ -13,13 +13,19 @@
 .logoText {
     font-weight: bold;
     font-size: 48px;
+    margin-left: 1rem;
 }
 
 .mainNav {
+    width: 50%;
+}
+
+.mainNav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 50%;
+    list-style: none;
+    width: 85%;
 }
 
 /* Fonte Assistant  */
@@ -27,4 +33,28 @@
     font-weight: bold;
     font-size: 31px;
     text-decoration: none;
+    color: #f1f0f0;
+    position: relative;
+}
+
+.navLink:hover {
+    color: #FFD700;
+    transition: all 0.3s ease;
+}
+
+.navLink::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 2px;
+    right: 0;
+    background: #FFD700;
+    transition: width 0.3s ease, right 0.3s ease;
+}
+
+.navLink:hover::after {
+    width: 100%;
+    left: 0;
 }
