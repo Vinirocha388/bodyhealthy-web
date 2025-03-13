@@ -2,7 +2,7 @@ import styles from "./header.module.css";
 
 const Header = () => {
     return (
-        <header>
+        <header className={styles.header}>
             <div className={styles.logo}>
                 <h1 className={styles.logoText  }>Body & Health</h1>
             </div>
