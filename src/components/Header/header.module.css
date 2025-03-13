@@ -9,6 +9,12 @@
     height: 83px;
 }
 
+.home {
+    text-decoration: none;
+    color: #f1f0f0;
+    cursor: pointer;
+}
+
 /* Fonte Catamaran */
 .logoText {
     font-weight: bold;
@@ -35,6 +41,7 @@
     text-decoration: none;
     color: #f1f0f0;
     position: relative;
+    cursor: pointer;
 }
 
 .navLink:hover {

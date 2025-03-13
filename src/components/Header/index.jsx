@@ -1,10 +1,11 @@
 import styles from "./header.module.css";
+import Link from "next/link";
 
 const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <h1 className={styles.logoText  }>Body & Health</h1>
+                <Link className={styles.home} href={"/"}> <h1 className={styles.logoText}>Body & Health</h1></Link>
             </div>
             <nav className={styles.mainNav}>
                 <ul>
