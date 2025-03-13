@@ -1,0 +1,34 @@
+.footer {
+    background-color: #161A1D;
+    width: 100%;
+}
+
+.footerLogo {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 50px;
+}
+
+.footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footerCollumn {}
+
+.footerLinks {
+    color: #fff;
+    font-size: 31px;
+    text-decoration: none;
+}
+
+.footerSocialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
