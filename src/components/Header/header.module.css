@@ -65,3 +65,8 @@
     width: 100%;
     left: 0;
 }
+
+.logoText:hover {
+    color: #FFD700;
+    transition: all 0.3s ease;
+}

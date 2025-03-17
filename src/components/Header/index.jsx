@@ -9,12 +9,12 @@ const Header = () => {
             </div>
             <nav className={styles.mainNav}>
                 <ul>
-                    <li><Link href="#" className={styles.navLink}>Início</Link></li>
-                    <li><Link href="#" className={styles.navLink}>Serviços</Link></li>
-                    <li><Link href="#" className={styles.navLink}>Dicas</Link></li>
-                    <li><Link href="#" className={styles.navLink}>Treinos</Link></li>
-                    <li><Link href="#" className={styles.navLink}>Login</Link></li>
-                    <li><Link href="#" className={styles.navLink}>Contato</Link></li>
+                    <li><Link href={"/"} className={styles.navLink}>Início</Link></li>
+                    <li><Link href={"/servicos"} className={styles.navLink}>Serviços</Link></li>
+                    <li><Link href={"/dicas"} className={styles.navLink}>Dicas</Link></li>
+                    <li><Link href={"/treinos"} className={styles.navLink}>Treinos</Link></li>
+                    <li><Link href={"/login"} className={styles.navLink}>Login</Link></li>
+                    <li><Link href={"/contato"} className={styles.navLink}>Contato</Link></li>
                 </ul>
             </nav>
         </header>
