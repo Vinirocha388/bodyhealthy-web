@@ -97,3 +97,17 @@
         font-size: 20px;
     }
 }
+
+@media screen and (max-width: 700px) {
+    .mainNav {
+        display: none;
+    }
+
+    .logo {
+        margin: auto;
+    }
+
+    .logoText {
+        font-size: 40px;
+    }
+}

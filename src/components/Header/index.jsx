@@ -5,16 +5,16 @@ const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
-                <Link className={styles.home} href={"/"}> <h1 className={styles.logoText}>Body & Health</h1></Link>
+                <a className={styles.home} href={"/"}> <h1 className={styles.logoText}>Body & Health</h1></a>
             </div>
             <nav className={styles.mainNav}>
                 <ul>
-                    <li><Link href={"/"} className={styles.navLink}>Início</Link></li>
-                    <li><Link href={"/servicos"} className={styles.navLink}>Serviços</Link></li>
-                    <li><Link href={"/dicas"} className={styles.navLink}>Dicas</Link></li>
-                    <li><Link href={"/treinos"} className={styles.navLink}>Treinos</Link></li>
-                    <li><Link href={"/login"} className={styles.navLink}>Login</Link></li>
-                    <li><Link href={"/contato"} className={styles.navLink}>Contato</Link></li>
+                    <li><a href={"/"} className={styles.navLink}>Início</a></li>
+                    <li><a href={"/servicos"} className={styles.navLink}>Serviços</a></li>
+                    <li><a href={"/dicas"} className={styles.navLink}>Dicas</a></li>
+                    <li><a href={"/treinos"} className={styles.navLink}>Treinos</a></li>
+                    <li><a href={"/login"} className={styles.navLink}>Login</a></li>
+                    <li><a href={"/contato"} className={styles.navLink}>Contato</a></li>
                 </ul>
             </nav>
         </header>
