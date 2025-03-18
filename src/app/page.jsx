@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Post from "../components/posts";
+import Post from "../components/Posts";
 import styles from "./page.module.css"
 
 export default function Home() {
@@ -40,6 +40,9 @@ export default function Home() {
           imgAlt={"Imagem de perfil"}
         />
       </main>
+      <div className={styles.commentButtonDiv}>
+        <img className={styles.commentButton} src="https://png.pngtree.com/png-clipart/20240210/original/pngtree-flat-style-comment-icon-for-y-on-a-photo-png-image_14281543.png" alt="Botão para Comentar" />
+      </div>
       <Footer />
     </div>
   );
