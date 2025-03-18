@@ -5,7 +5,7 @@ import { FaInstagram, FaWhatsapp, FaFacebook } from "react-icons/fa";
 const Footer = () => {
     return (
         <footer className={styles.footer}>
-                <h1 className={styles.footerLogo}>Body & Health</h1>
+            <h1 className={styles.footerLogo}>Body & Health</h1>
             <div className={styles.footerContent}>
                 <div className={styles.footerCollumns}>
                     <div className={styles.footerCollumnOne}>
@@ -20,13 +20,13 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className={styles.footerSocialMedia}>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                    <a className={styles.socialMedia} href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                         <FaInstagram size={60} color="#E4405F" />
                     </a>
-                    <a href="https://wa.me/seuNumero" target="_blank" rel="noopener noreferrer">
+                    <a className={styles.socialMedia} href="https://wa.me/seuNumero" target="_blank" rel="noopener noreferrer">
                         <FaWhatsapp size={60} color="#25D366" />
                     </a>
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                    <a className={styles.socialMedia} href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                         <FaFacebook size={60} color="#1877F2" />
                     </a>
                 </div>
