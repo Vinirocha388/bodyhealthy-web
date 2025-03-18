@@ -1,0 +1,12 @@
+.container {
+    background-color: black;
+}
+
+.homeTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    font-size: 3rem;
+    color: white;
+}
