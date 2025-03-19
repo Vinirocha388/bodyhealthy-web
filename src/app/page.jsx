@@ -1,6 +1,6 @@
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Post from "../components/Posts";
+import Post from "@/components/posts";
 import styles from "./page.module.css"
 
 export default function Home() {

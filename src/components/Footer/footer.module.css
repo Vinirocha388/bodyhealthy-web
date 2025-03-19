@@ -82,3 +82,29 @@
     transition: 0.3s ease;
 }
 
+@media (max-width: 768px) {
+    .footerContent {
+        display: none;
+    }
+
+    .footer h1 {
+        display: none;
+    }
+
+    .footer {
+        background-color: #000000;
+    }
+
+    .footerCopyright {
+        font-size: 17px;
+        margin-top: 12px;
+        padding-top: 7%;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 950px) {
+    .footerContent {
+        gap: 50%;
+    }
+}
