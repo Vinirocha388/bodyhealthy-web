@@ -17,14 +17,10 @@
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
-    margin-right: 10%;
+    margin-right: 5%;
     margin-top: 5vh;
 }
 
-.commentButton {
-    width: 10%;
-    height: auto;
-}
 
 .commentButton:hover {
     cursor: pointer;

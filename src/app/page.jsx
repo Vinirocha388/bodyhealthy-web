@@ -1,7 +1,8 @@
+import { FaCommentMedical } from "react-icons/fa";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Post from "@/components/posts";
-import styles from "./page.module.css"
+import styles from "./page.module.css";
 
 export default function Home() {
   return (
@@ -10,27 +11,27 @@ export default function Home() {
       <main>
         <h1 className={styles.homeTitle}>Postagens</h1>
         <Post
-          titulo={"Ciclano"}
+          titulo={"Vitor Argeri"}
           descricao={"Nossa, meu treino hoje foi maravilhoso!"}
-          imgLink={"https://static-00.iconduck.com/assets.00/profile-user-icon-1024x1024-5fg7tz2z.png"}
+          imgLink={"https://avatars.githubusercontent.com/u/158165380?v=4"}
           imgAlt={"Imagem de perfil"}
         />
         <Post
-          titulo={"Fulano"}
+          titulo={"Vinicius Pereira"}
           descricao={"Adorei a aula de spinning, foi incrível!"}
-          imgLink={"https://static-00.iconduck.com/assets.00/profile-user-icon-1024x1024-5fg7tz2z.png"}
+          imgLink={"https://avatars.githubusercontent.com/u/158165909?v=4"}
           imgAlt={"Imagem de perfil"}
         />
         <Post
-          titulo={"Beltrano"}
+          titulo={"Pablo Delgado"}
           descricao={"Hoje consegui bater meu recorde na corrida!"}
-          imgLink={"https://static-00.iconduck.com/assets.00/profile-user-icon-1024x1024-5fg7tz2z.png"}
+          imgLink={"https://avatars.githubusercontent.com/u/158165561?v=4"}
           imgAlt={"Imagem de perfil"}
         />
         <Post
-          titulo={"Sicrano"}
+          titulo={"Vinicius Rocha"}
           descricao={"Treino de perna concluído com sucesso, bora descansar!"}
-          imgLink={"https://static-00.iconduck.com/assets.00/profile-user-icon-1024x1024-5fg7tz2z.png"}
+          imgLink={"https://avatars.githubusercontent.com/u/158187426?v=4"}
           imgAlt={"Imagem de perfil"}
         />
         <Post
@@ -41,7 +42,7 @@ export default function Home() {
         />
       </main>
       <div className={styles.commentButtonDiv}>
-        <img className={styles.commentButton} src="https://png.pngtree.com/png-clipart/20240210/original/pngtree-flat-style-comment-icon-for-y-on-a-photo-png-image_14281543.png" alt="Botão para Comentar" />
+      <FaCommentMedical className={styles.commentButton} size={70} color="white" />
       </div>
       <Footer />
     </div>
