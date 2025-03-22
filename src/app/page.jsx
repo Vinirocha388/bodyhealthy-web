@@ -43,6 +43,7 @@ export default function Home() {
       </main>
       <div className={styles.commentButtonDiv}>
       <FaCommentMedical className={styles.commentButton} size={70} color="white" />
+      <p>Adicionar uma postagem </p>
       </div>
       <Footer />
     </div>

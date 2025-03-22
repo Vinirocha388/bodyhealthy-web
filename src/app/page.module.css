@@ -19,9 +19,32 @@
     justify-content: flex-end;
     margin-right: 5%;
     margin-top: 5vh;
+    flex-direction: column;
 }
 
+.commentButton {
+    margin-right: 5%;
+    margin-bottom: 1%;
+}
 
 .commentButton:hover {
     cursor: pointer;
+}
+
+.commentButtonDiv p {
+    color: white;
+    font-size: 1.5rem;
+
+}
+
+@media (max-width: 768px) {
+
+    .commentButtonDiv p {
+        font-size: 1.2rem;
+        width: 40%;
+    }
+
+    .commentButton {
+        margin-right: 13%;
+    }
 }
