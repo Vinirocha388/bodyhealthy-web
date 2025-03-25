@@ -1,6 +1,6 @@
-import Footer from '@/components/Footer';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 import styles from './treinos.module.css';
-import Header from '@/components/Header';
 
 export default function treinos() {
     return (
