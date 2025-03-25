@@ -29,16 +29,12 @@
 }
 
 @media (max-width: 768px) {
-    .post {
+    .treinos {
         display: flex;
         width: 80%;
         justify-content: center;
         align-items: center;
         margin-left: 10%;
-    }
-
-    .icons {
-        margin-left: 5%;
     }
 
 }
