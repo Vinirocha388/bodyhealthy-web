@@ -1,0 +1,50 @@
+.treinos {
+    background-color: #373737;
+    width: 60%;
+    height: 220px;
+    border-radius: 10px;
+    margin-left: 20%;
+    margin-top: 5vh;
+    display: flex;
+}
+
+.treinosContent {
+    flex-direction: column;
+    color: white; 
+    height: 100%; 
+    width: 100%; 
+    margin-left: 4%;
+}
+
+.title {
+    margin-top: 3vh;
+}
+
+.objective {
+    margin-top: 3vh;
+}
+
+.frequency {
+    margin-top: 3vh;
+}
+
+@media (max-width: 768px) {
+    .post {
+        display: flex;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        margin-left: 10%;
+    }
+
+    .icons {
+        margin-left: 5%;
+    }
+
+}
+
+.treinos:hover {
+    background-color: #4a4a4a;
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+}
