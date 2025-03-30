@@ -67,48 +67,42 @@
     transition: all 0.3s ease;
 }
 
-@media screen and (max-width: 1300px) {
-    .header {
-        padding: 1rem;
-    }
-
-    .logoText {
-        font-size: 30px;
-    }
-
-    .mainNav ul {
-        gap: 1.5rem; 
-    }
-
-    .navLink {
-        font-size: 22px;
-    }
+.userIcon {
+    display: none;
 }
 
-@media screen and (max-width: 850px) {
-    .logoText {
-        font-size: 25px;
-    }
-
-    .mainNav ul {
-        gap: 0.75rem; 
-    }
-
-    .navLink {
-        font-size: 20px;
-    }
+.menuIcon {
+    display: none;
 }
 
-@media screen and (max-width: 700px) {
+
+@media (max-width: 768px) {
     .mainNav {
         display: none;
     }
 
-    .logo {
-        margin: auto;
+    .userIcon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menuIcon {
+        display: block;
+        cursor: pointer;
     }
 
     .logoText {
-        font-size: 40px;
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 45px;
+    }
+
+    .header {
+        justify-content: space-around;
     }
 }

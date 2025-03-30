@@ -1,20 +1,24 @@
 import styles from "./header.module.css";
 import Link from "next/link";
+import { FaUserCircle } from "react-icons/fa";
+import { MdOutlineMenu } from "react-icons/md";
 
 const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.logo}>
+                <MdOutlineMenu className={styles.menuIcon} size={60} color="white" />
                 <a className={styles.home} href={"/"}> <h1 className={styles.logoText}>Body & Health</h1></a>
+                <FaUserCircle className={styles.userIcon} size={50} color="white" />
             </div>
             <nav className={styles.mainNav}>
                 <ul>
-                    <li><a href={"/"} className={styles.navLink}>Início</a></li>
-                    <li><a href={"/servicos"} className={styles.navLink}>Serviços</a></li>
-                    <li><a href={"/dicas"} className={styles.navLink}>Dicas</a></li>
-                    <li><a href={"/treinos"} className={styles.navLink}>Treinos</a></li>
-                    <li><a href={"/login"} className={styles.navLink}>Login</a></li>
-                    <li><a href={"/contato"} className={styles.navLink}>Contato</a></li>
+                    <li><Link href={"/"} className={styles.navLink}>Início</Link></li>
+                    <li><Link href={"/servicos"} className={styles.navLink}>Serviços</Link></li>
+                    <li><Link href={"/dicas"} className={styles.navLink}>Dicas</Link></li>
+                    <li><Link href={"/treinos"} className={styles.navLink}>Treinos</Link></li>
+                    <li><Link href={"/login"} className={styles.navLink}>Login</Link></li>
+                    <li><Link href={"/contato"} className={styles.navLink}>Contato</Link></li>
                 </ul>
             </nav>
         </header>
