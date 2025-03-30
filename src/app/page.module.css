@@ -163,3 +163,89 @@
     transition: 0.3s ease-in-out;
     transform: scale(1.1);
 }
+
+@media (max-width: 768px) {
+
+    .welcomeTitle {
+        font-size: 2.5rem;
+        padding-left: 5%;
+    }
+
+    .welcomeText {
+        font-size: 1.25rem;
+    }
+
+    .button {
+        height: 75px;
+        width: 150px;
+        font-size: 15px;
+    }
+
+    .whoWeAre {
+        display: none;
+    }
+
+    .posts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #ffff;
+        border-radius: 20px;
+        margin: 0 10px 0 10px;
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .posts h1 {
+        font-size: 1.5rem;
+        margin: 20px 0 0 0 ;
+    }
+
+    .posts1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        background-color: #272727;
+        padding: 10px 20px 10px 20px;
+        margin: 0 10px 0 10px;
+        color: #ffff;
+        gap: 20px;
+        border-radius: 10px;
+    }
+
+    .postButton {
+        background-color: #272727;
+        padding: 10px 20px;
+        font-size: 15px;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #ffff;
+    }
+
+
+    .postTitle {
+        font-size: 1.5rem;
+    }
+
+    .postDesc {
+        font-size: 0.5rem;
+    }
+
+    .exerciseTitle {
+        font-size: 1.5rem;
+    }
+
+    .frequentlyQuestionsTitle {
+        font-size: 2rem;
+    }
+
+    .frequentlyQuestionsText {
+        font-size: 1rem;
+    }
+
+    .knowMoreText {
+        font-size: 1.5rem;
+    }
+}

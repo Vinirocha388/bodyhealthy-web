@@ -1,6 +1,8 @@
 import styles from "./page.module.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { FaUserCircle } from "react-icons/fa";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -35,6 +37,22 @@ export default function HomePage() {
               do seu corpo e mente!
             </u>
           </p>
+        </div>
+
+        <div className={styles.posts}>
+          <h1>Post da comunidade</h1>
+          <div className={styles.posts1}>
+          <FaUserCircle className={styles.userIcon} size={40} />
+          <h2 className={styles.postTitle}>Ciclano</h2>
+          <p className={styles.postDesc}>"Quem mais ama essa sensação pós-treino? É viciante! "</p>
+          </div>
+
+          <div className={styles.posts1}>
+          <FaUserCircle className={styles.userIcon} size={40} />
+          <h2 className={styles.postTitle}>Ciclano</h2>
+          <p className={styles.postDesc}>"Quem mais ama essa sensação pós-treino? É viciante! "</p>
+          </div>
+          <Link href={"/postagens"}><button className={styles.postButton}>Ir para Fórum</button></Link>
         </div>
 
         <div className={styles.ourServices}>

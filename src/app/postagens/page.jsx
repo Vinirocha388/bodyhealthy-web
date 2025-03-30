@@ -1,8 +1,9 @@
 import { FaCommentMedical } from "react-icons/fa";
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import Post from "@/components/posts";
-import styles from "./page.module.css";
+
+import styles from "./postagens.module.css"
+import Header from "../components/Header";
+import Post from "../components/posts";
+import Footer from "../components/Footer";
 
 export default function Home() {
   return (
