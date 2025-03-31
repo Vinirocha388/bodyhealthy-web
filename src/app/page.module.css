@@ -164,6 +164,10 @@
     transform: scale(1.1);
 }
 
+.posts {
+    display: none;
+}
+
 @media (max-width: 768px) {
 
     .welcomeTitle {
@@ -224,7 +228,6 @@
         color: #ffff;
     }
 
-
     .postTitle {
         font-size: 1.5rem;
     }
@@ -233,19 +236,39 @@
         font-size: 0.5rem;
     }
 
+    .ourServices {
+        margin-top: 100px;
+    }
+
+    .ourServicesContainer {
+        width: 90%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: center;
+        padding: 1rem;
+        background-color: #272727;
+        border-radius: 20px;
+    }
+
     .exerciseTitle {
         font-size: 1.5rem;
     }
 
+    .frequentlyQuestions {
+       margin-top: 20px;
+    }
+    
     .frequentlyQuestionsTitle {
         font-size: 2rem;
+        text-align: center;
+        margin-top: 0;
     }
 
     .frequentlyQuestionsText {
         font-size: 1rem;
     }
 
-    .knowMoreText {
-        font-size: 1.5rem;
+    .knowMore {
+        display: none;
     }
 }
