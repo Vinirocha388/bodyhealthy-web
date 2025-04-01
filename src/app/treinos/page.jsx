@@ -8,7 +8,7 @@ export default function treinos() {
         <div className={styles.treinos}>
             <Header />  
             <div className={styles.imagemTreinos}>
-                <h1 className={styles.treinosTitle}>Treinos</h1>
+                <h1 className={styles.treinosTitle}>Treinosㅤㅤ</h1>
             </div>
             <main>
                 <Treinos

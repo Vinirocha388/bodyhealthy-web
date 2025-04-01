@@ -1,14 +1,17 @@
 .container {
     width: 100%;
     height: 50%;
-    background-image: url(https://tecnofit-site.s3.sa-east-1.amazonaws.com/media/files/2024/05/15113724/4Konnen_Equipamentos.jpg);
+    background-image: url(https://wallpapers.com/images/hd/fitness-gym-and-equipment-photography-dn9w2z4r8yd2wi47.jpg);
     background-size: cover; 
     background-position: center;
     background-color: rgba(0, 0, 0, 0.3);
+    align-items: center;
+    justify-content: center;
+    background-blend-mode: darken;
 }
 
 .contatoImagem {
-    height: 50rem;
+    height: 5m;
     width: 100%;
     background-blend-mode: darken;
     margin-top: 4vh;
@@ -23,12 +26,13 @@
 }
 
 .contatoContainer {
-    background-color: #373737;
-    width: 60%;
-    height: 80%;
+    background-color: #242222;
+    width: 55%;
+    height: 41rem;
     border-radius: 2rem;
-    margin-left: 20%;
-    margin-top: 5vh;
+    margin-left: 22.7%;
+    margin-top: 3vh;
+    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -37,23 +41,51 @@
     position: relative;
     width: 80%;
     height: 80%;
-    margin-top: 5vh;
-    background-color: aliceblue;
 }
 
-.contatoNome, .contatoEmail, .contatoMensagem {
+.contatoNome, .contatoEmail {
     justify-content: center;
     align-items: center;
-    height: 5rem;
-    width: 60%;
+    height: 3rem;
+    width: 80%;
+    margin: 6vh;
     font-size: 1.2rem;
+    color: white;
+}
+
+.contatoMensagem {
+    justify-content: center;
+    align-items: center;
+    height: 14rem;
+    width: 80%;
+    margin: 6vh;
+    font-size: 1.2rem;
+    color: white;
 }
 
 .contatoNameInput, .contatoEmailInput, .contatoMensagemInput {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
-    padding-left: 1rem;
+    padding: 1rem;
+    margin-top: 5px;
     font-size: 1.2rem;
     border: none;
+}
+
+.contatoButton {
+    width: 20%;
+    height: 5rem;
+    margin-left: 67%;
+    border-radius: 1rem;
+    background-color: #f2f2f2;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.contatoButton:hover {
+    cursor: pointer;
+    background-color: #FFD700;
+    transition: background-color 0.3s ease;
 }
