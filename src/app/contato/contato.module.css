@@ -1,0 +1,59 @@
+.container {
+    width: 100%;
+    height: 50%;
+    background-image: url(https://tecnofit-site.s3.sa-east-1.amazonaws.com/media/files/2024/05/15113724/4Konnen_Equipamentos.jpg);
+    background-size: cover; 
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.contatoImagem {
+    height: 50rem;
+    width: 100%;
+    background-blend-mode: darken;
+    margin-top: 4vh;
+}
+
+.contatoTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: white;
+}
+
+.contatoContainer {
+    background-color: #373737;
+    width: 60%;
+    height: 80%;
+    border-radius: 2rem;
+    margin-left: 20%;
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+}
+
+.contatoContainerDiv {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    margin-top: 5vh;
+    background-color: aliceblue;
+}
+
+.contatoNome, .contatoEmail, .contatoMensagem {
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 60%;
+    font-size: 1.2rem;
+}
+
+.contatoNameInput, .contatoEmailInput, .contatoMensagemInput {
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+    padding-left: 1rem;
+    font-size: 1.2rem;
+    border: none;
+}
