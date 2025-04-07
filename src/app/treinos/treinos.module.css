@@ -62,4 +62,12 @@
     .commentButton {
         margin-right: 13%;
     }
+    .treinosTitle {
+        font-size: 3rem;
+        margin-left: 5rem;
+    }
+
+    .imagemTreinos {
+        height: 40rem;
+    }
 }

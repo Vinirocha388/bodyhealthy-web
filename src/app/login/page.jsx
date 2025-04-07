@@ -12,22 +12,22 @@ export default function login() {
           <div className={styles.textBox}>
             <input
               type="text"
-              placeholder="endereço de e-mail ou nome de usuário"
+              placeholder="Endereço de e-mail ou nome de usuário"
               className={styles.textBoxText}
             />
           </div>
           <div className={styles.textBox}>
             <input
               type="text"
-              placeholder="senha"
+              placeholder="Senha"
               className={styles.textBoxText}
             />
           </div>
           <div className={styles.loginTextDiv}>
             <div className={styles.loginTextCollumn}>
-              <p className={styles.loginText}>Esqueceu minha senha</p>
+              <p className={styles.loginText}>Esqueci minha senha</p>
               <p className={styles.loginText}>
-                Não tem uma conta? Se cadastre no Body & Health
+                Não tem uma conta? Se cadastre na Body & Health
               </p>
             </div>
             <div className={styles.buttonDiv}>
