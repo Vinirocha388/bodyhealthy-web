@@ -1,0 +1,53 @@
+.container {
+  background-color: black;
+}
+
+.main {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  color: white;
+  gap: 4.77vh;
+  font-weight: bold;
+}
+
+.conclusionLogo {
+  font-size: 2.75rem;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.conclusionText {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 0 5%;
+  line-height: 1.6;
+  color: #ffffff;
+}
+
+.conclusionButton {
+    background-color: #ffff;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 7.5vh;
+    width: 10vw;   
+    margin-bottom: 5vh;
+}
+
+.conclusionButton:hover {
+    background-color: #FFD700;
+    color: black;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
