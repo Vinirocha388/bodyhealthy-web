@@ -1,6 +1,7 @@
 import styles from "./login.module.css";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import Link from "next/link";
 
 export default function login() {
   return (
@@ -18,7 +19,7 @@ export default function login() {
           </div>
           <div className={styles.textBox}>
             <input
-              type="text"
+              type="password"
               placeholder="Senha"
               className={styles.textBoxText}
             />
@@ -27,11 +28,13 @@ export default function login() {
             <div className={styles.loginTextCollumn}>
               <p className={styles.loginText}>Esqueci minha senha</p>
               <p className={styles.loginText}>
-                Não tem uma conta? Se cadastre na Body & Health
+                Não tem uma conta? <Link href="/cadastro">Se cadastre na Body & Health</Link> 
               </p>
             </div>
             <div className={styles.buttonDiv}>
-              <button className={styles.button}>Entrar</button>
+              <Link href="/conclusao" passHref>
+                <button className={styles.button}>Entrar</button>
+              </Link>
             </div>
           </div>
         </div>
