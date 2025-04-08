@@ -4,7 +4,7 @@
     background-image: url(https://wallpapers.com/images/hd/fitness-gym-and-equipment-photography-dn9w2z4r8yd2wi47.jpg);
     background-size: cover; 
     background-position: center;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
     justify-content: center;
     background-blend-mode: darken;
@@ -26,13 +26,16 @@
 }
 
 .contatoContainer {
-    background-color: #242222;
+    background-color: rgba(0, 0, 0, 0.9);
     width: 55%;
+    background-blend-mode: darken;
+    border-color: #020202;
+    border-width: 0.1rem;
+    border-style: solid;
     height: 41rem;
     border-radius: 2rem;
-    margin-left: 22.7%;
+    margin-left: 44.3vh;
     margin-top: 3vh;
-    position: relative;
     display: flex;
     justify-content: center;
 }
@@ -49,7 +52,7 @@
     height: 3rem;
     width: 80%;
     margin: 6vh;
-    font-size: 1.2rem;
+    font-size: 1.6vh;
     color: white;
 }
 
@@ -59,7 +62,7 @@
     height: 14rem;
     width: 80%;
     margin: 6vh;
-    font-size: 1.2rem;
+    font-size: 1.6vh;
     color: white;
 }
 
@@ -69,19 +72,28 @@
     border-radius: 1rem;
     padding: 1rem;
     margin-top: 5px;
-    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8vh;
     border: none;
 }
 
+.contatoEnviar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5vh;
+}
+
 .contatoButton {
-    width: 20%;
-    height: 5rem;
-    margin-left: 67%;
-    border-radius: 1rem;
+    width: 20vh;
+    height: 5vh;
+    border-radius: 1.6vh;
     background-color: #f2f2f2;
     color: black;
-    font-size: 1.5rem;
+    font-size: 2.4vh;
     font-weight: bold;
+    justify-content: center;
+    text-align: center;
 }
 
 .contatoButton:hover {
@@ -116,6 +128,4 @@
         height: 100%;
         margin-left: -15px;
     }
-
-
 }
