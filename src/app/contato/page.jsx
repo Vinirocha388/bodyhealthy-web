@@ -22,7 +22,7 @@ return (
             </div>
             <div className={styles.contatoMensagem}>
                 <h2>Mensagem:</h2>
-                <textarea name="message" placeholder=" Sua me'nsagem aqui:"  className={styles.contatoMensagemInput} required></textarea>
+                <textarea name="message" placeholder=" Sua mensagem aqui:"  className={styles.contatoMensagemInput} required></textarea>
             </div>
             <div className={styles.contatoEnviar}>
                 <button type="submit" className={styles.contatoButton}>Enviar</button>
