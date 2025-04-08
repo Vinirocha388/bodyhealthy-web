@@ -7,7 +7,7 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 15vh;
+  margin-top: 10vh;
   color: white;
   gap: 4.77vh;
   font-weight: bold;
@@ -42,6 +42,7 @@
     border-radius: 10px;
     height: 7.5vh;
     width: 10vw;   
+    margin-bottom: 5vh;
 }
 
 .conclusionButton:hover {
