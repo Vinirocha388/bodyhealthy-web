@@ -1,9 +1,56 @@
+'use client';
+
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import styles from "./login.module.css";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Link from "next/link";
 
-export default function login() {
+export default function Login() {
+  const [emailOrUsername, setEmailOrUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState(null);
+  const router = useRouter();
+
+  const handleLogin = async () => {
+    try {
+      // Faz a requisição para o endpoint do backend
+      const response = await fetch("http://localhost:4000/user", {
+        method: "GET", // Alterado para GET, já que você quer ler os dados
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const users = await response.json();
+
+      if (!response.ok) {
+        setError("Erro ao buscar dados do servidor.");
+        return;
+      }
+
+      // Verifica se existe um usuário com o email/username e senha fornecidos
+      const user = users.find(
+        (u) =>
+          (u.email === emailOrUsername || u.userName === emailOrUsername) &&
+          u.password === password
+      );
+
+      if (!user) {
+        setError("E-mail/nome de usuário ou senha incorretos.");
+        return;
+      }
+
+      // Se o login for bem-sucedido, redireciona para /home
+      // Opcional: Salvar token ou dados do usuário no localStorage
+      // localStorage.setItem("token", "algum-token-aqui");
+      router.push("/");
+
+    } catch (err) {
+      setError("Erro ao conectar com o servidor.");
+      console.error(err);
+    }
+  };
+
   return (
     <div className={styles.container}>
       <Header />
@@ -15,6 +62,8 @@ export default function login() {
               type="text"
               placeholder="Endereço de e-mail ou nome de usuário"
               className={styles.textBoxText}
+              value={emailOrUsername}
+              onChange={(e) => setEmailOrUsername(e.target.value)}
             />
           </div>
           <div className={styles.textBox}>
@@ -22,19 +71,22 @@ export default function login() {
               type="password"
               placeholder="Senha"
               className={styles.textBoxText}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
+
+          {error && <p style={{ color: "red" }}>{error}</p>}
+
           <div className={styles.loginTextDiv}>
             <div className={styles.loginTextCollumn}>
               <p className={styles.loginText}>Esqueci minha senha</p>
               <p className={styles.loginText}>
-                Não tem uma conta? <Link href="/cadastro">Se cadastre na Body & Health</Link> 
+                Não tem uma conta? <Link href="/cadastro">Se cadastre na Body & Health</Link>
               </p>
             </div>
             <div className={styles.buttonDiv}>
-              <Link href="/conclusao" passHref>
-                <button className={styles.button}>Entrar</button>
-              </Link>
+              <button className={styles.button} onClick={handleLogin}>Entrar</button>
             </div>
           </div>
         </div>
