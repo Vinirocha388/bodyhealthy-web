@@ -77,6 +77,14 @@
     cursor: pointer;
 }
 
+.errorMessage {
+  color: red;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
     .logoText {
         font-size: 40px;

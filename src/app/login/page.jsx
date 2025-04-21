@@ -16,9 +16,8 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       // Faz a requisição para o endpoint do backend
-      const response = await fetch("http://localhost:4000/user", {
-        method: "GET", // Alterado para GET, já que você quer ler os dados
-        headers: { "Content-Type": "application/json" },
+      const response = await fetch("https://bodyhealthy-back.onrender.com/user", {
+        method: "GET",
       });
 
       const users = await response.json();
@@ -41,10 +40,7 @@ export default function Login() {
       }
 
       // Se o login for bem-sucedido, redireciona para /home
-      // Opcional: Salvar token ou dados do usuário no localStorage
-      // localStorage.setItem("token", "algum-token-aqui");
       router.push("/");
-
     } catch (err) {
       setError("Erro ao conectar com o servidor.");
       console.error(err);
@@ -76,7 +72,7 @@ export default function Login() {
             />
           </div>
 
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {error && <p className={styles.errorMessage}>{error}</p>}
 
           <div className={styles.loginTextDiv}>
             <div className={styles.loginTextCollumn}>
