@@ -32,8 +32,18 @@ export default function Login() {
       const user = users.find((user) => {
         return user.email === emailOrUsername || user.userName === emailOrUsername;
       });
+      const user = users.find((user) => {
+        return user.email === emailOrUsername || user.userName === emailOrUsername;
+      });
 
       if (!user) {
+        setError("Usuário ou senha inválidos.");
+        return;
+      }
+
+      const isPasswordValid = await compare(password, user.password);
+      if (!isPasswordValid) {
+        setError("Usuário ou senha inválidos.");
         setError("Usuário ou senha inválidos.");
         return;
       }
