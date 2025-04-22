@@ -85,6 +85,10 @@
     display: none;
 }
 
+.dropdownMenu {
+    display: none;
+}
+
 @media (max-width: 768px) {
     .mainNav {
         display: none;
