@@ -17,7 +17,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       // Faz a requisição para o endpoint do backend
-      const response = await fetch("http://localhost:4000/user", {
+      const response = await fetch("bodyhealthy-back.orender.com/user", {
         method: "GET",
       });
 

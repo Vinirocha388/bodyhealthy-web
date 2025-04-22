@@ -16,7 +16,7 @@ export default function conclusaoCadastro() {
                     <br />
                     Aproveite tudo que preparamos para você!
                 </p>
-                <Link href={"/home"} className={styles.conclusionLink}>
+                <Link href={"./"} className={styles.conclusionLink}>
                     <button className={styles.conclusionButton}>Voltar para Página Inicial</button>  
                 </Link>
             </main>
