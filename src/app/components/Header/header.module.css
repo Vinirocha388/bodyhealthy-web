@@ -1,21 +1,27 @@
 .header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    padding: 1rem;
+    align-items: center;
     background-color: black;
+    gap: 2rem;
+    color: white;
+    padding: 1% 5%;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
 }
 
 .home {
     text-decoration: none;
-    color: #f1f0f0;
+    color: white;
     cursor: pointer;
 }
 
-/* Fonte Catamaran */
 .logoText {
     font-weight: bold;
-    font-size: 48px;
+    font-size: 30px;
     margin-left: 1rem;
 }
 
@@ -24,16 +30,20 @@
 }
 
 .mainNav ul {
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     display: flex;
-    gap: 3rem;
-    width: 85%;
+    width: 100%;
+    gap: 0.6rem;
+}
+
+.mainNav ul li {
+    list-style: none;
 }
 
 .navLink {
     font-weight: bold;
-    font-size: 31px;
+    font-size: 20px;
     text-decoration: none;
     color: #f1f0f0;
     position: relative;
@@ -74,7 +84,6 @@
 .menuIcon {
     display: none;
 }
-
 
 @media (max-width: 768px) {
     .mainNav {
