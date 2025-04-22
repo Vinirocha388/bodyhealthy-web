@@ -24,6 +24,8 @@
     text-decoration: underline;
     position: relative;
     bottom: 75px;
+    margin-left: 15%;
+    margin-right: 10%;
 }
 
 .welcomeText {
@@ -177,8 +179,6 @@
 
     .welcomeTitle {
         font-size: 2.5rem;
-        padding-left: 5%;
-        margin-left: 15%;
     }
 
     .welcomeText {
@@ -264,7 +264,8 @@
     }
 
     .frequentlyQuestions {
-    margin-top: 20px;
+        margin-top: 20px;
+        margin-left: 10%
     }
     
     .frequentlyQuestionsTitle {
