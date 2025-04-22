@@ -1,15 +1,27 @@
 .container {
-    background-color: black;
-  }
-  
-  .main {
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    margin-top: 10vh;
-    color: white;
-    gap: 4.77vh;
-    font-weight: bold;
-  }
-  
+  width: 100%;
+  height: 50%;
+  background-image: url(https://img.freepik.com/fotos-premium/na-academia-fileiras-de-halteres-oferecem-opcoes-para-treinamento-de-forca-vertical-mobile-wallpaper_896558-14279.jpg?w=360);
+  background-size: cover; 
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  background-blend-mode: darken;
+}
+
+.contatoImagem {
+  height: 5m;
+  width: 100%;
+  background-blend-mode: darken;
+  margin-top: 4vh;
+}
+
+
+.cadastroTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  color: white;
+}
