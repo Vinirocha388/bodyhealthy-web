@@ -17,7 +17,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       // Faz a requisição para o endpoint do backend
-      const response = await fetch("bodyhealthy-back.orender.com/user", {
+      const response = await fetch("https://bodyhealthy-back.onrender.com/user", {
         method: "GET",
       });
 
@@ -32,18 +32,8 @@ export default function Login() {
       const user = users.find((user) => {
         return user.email === emailOrUsername || user.userName === emailOrUsername;
       });
-      const user = users.find((user) => {
-        return user.email === emailOrUsername || user.userName === emailOrUsername;
-      });
 
       if (!user) {
-        setError("Usuário ou senha inválidos.");
-        return;
-      }
-
-      const isPasswordValid = await compare(password, user.password);
-      if (!isPasswordValid) {
-        setError("Usuário ou senha inválidos.");
         setError("Usuário ou senha inválidos.");
         return;
       }
