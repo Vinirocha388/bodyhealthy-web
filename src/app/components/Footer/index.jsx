@@ -8,12 +8,12 @@ const Footer = () => {
             <h1 className={styles.footerLogo}>Body & Health</h1>
             <div className={styles.footerContent}>
                 <div className={styles.footerCollumns}>
-                    <div className={styles.footerCollumnOne}>
+                    <div className={styles.footerCollumn}>
                         <Link className={styles.footerLinks} href="/">Início</Link>
                         <Link className={styles.footerLinks} href="/servicos">Serviços</Link>
                         <Link className={styles.footerLinks} href="/dicas">Dicas</Link>
                     </div>
-                    <div className={styles.footerCollumnTwo}>
+                    <div className={styles.footerCollumn}>
                         <Link className={styles.footerLinks} href="/treinos">Treinos</Link>
                         <Link className={styles.footerLinks} href="/login">Login</Link>
                         <Link className={styles.footerLinks} href="/contato">Contato</Link>

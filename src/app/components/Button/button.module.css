@@ -1,0 +1,39 @@
+.button {
+    background-color: #ffff;
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    height: 7.5vh;
+    width: 15vw;
+}
+
+.button:hover {
+    background-color: #FFD700;
+    color: black;
+    transition: 0.3s ease-in-out;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1000px) {
+    .button {
+        font-size: 12.5px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .button {
+        height: 75px;
+        width: 150px;
+        font-size: 12px;
+    }
+
+}

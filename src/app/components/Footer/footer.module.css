@@ -21,7 +21,7 @@
 .footerContent {
     display: flex;
     flex-direction: row;
-    gap: 55%;
+    gap: 40%;
     justify-content: center;
     align-items: center;
     margin-top: 1rem;
@@ -33,14 +33,7 @@
     gap: 3rem;
 }
 
-.footerCollumnOne {
-    display: flex;
-    flex-direction: column;
-    margin-right: 0px;
-    gap: 10px;
-}
-
-.footerCollumnTwo {
+.footerCollumn {
     display: flex;
     flex-direction: column;
     margin-right: 0px;
@@ -69,7 +62,7 @@
 
 .footerCopyright {
     color: #fff;
-    font-size: 20px;
+    font-size: 17px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,15 +89,9 @@
     }
 
     .footerCopyright {
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 12px;
         padding-top: 7%;
         margin-bottom: 0;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 950px) {
-    .footerContent {
-        gap: 50%;
     }
 }
