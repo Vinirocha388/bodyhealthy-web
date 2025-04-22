@@ -42,14 +42,13 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: bold;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 10px;
     height: 7.5vh;
-    width: 10vw;
-    
+    width: 15vw;
 }
 
 .whoWeAre {
@@ -168,6 +167,12 @@
     display: none;
 }
 
+@media (max-width: 1000px) {
+    .button {
+        font-size: 12.5px;
+    }
+}
+
 @media (max-width: 768px) {
 
     .welcomeTitle {
@@ -182,7 +187,7 @@
     .button {
         height: 75px;
         width: 150px;
-        font-size: 15px;
+        font-size: 12px;
     }
 
     .whoWeAre {
@@ -255,7 +260,7 @@
     }
 
     .frequentlyQuestions {
-       margin-top: 20px;
+    margin-top: 20px;
     }
     
     .frequentlyQuestionsTitle {
