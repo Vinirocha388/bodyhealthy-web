@@ -13,23 +13,23 @@ export default function treinos() {
             <main>
                 <Treinos
                 titulo={"Treino de Hipertrofia"}
-                objetivo={"Objetivo: Ganho de massa muscular"}
-                frequencia={"Frequência: 4-5 vezes por semana"}
+                objetivo={"Ganho de massa muscular"}
+                frequencia={"4-5 vezes por semana"}
                 />
                 <Treinos
                 titulo={"Treino de Resistência"}
-                objetivo={"Objetivo: Aumento de resistência física"}
-                frequencia={"Frequência: 3-4 vezes por semana"}
+                objetivo={"Aumento de resistência física"}
+                frequencia={"3-4 vezes por semana"}
                 />
                 <Treinos
                 titulo={"Treino de Funcional"}
-                objetivo={"Objetivo: Ganho de massa muscular"}
-                frequencia={"Frequência: 3 vezes por semana"}
+                objetivo={"Ganho de massa muscular"}
+                frequencia={"3 vezes por semana"}
                 />
                 <Treinos
                 titulo={"Treino de Hipertrofia"}
-                objetivo={"Objetivo: Ganho de massa muscular"}
-                frequencia={"Frequência: 5 vezes por semana"}
+                objetivo={"Ganho de massa muscular"}
+                frequencia={"5 vezes por semana"}
                 />
             </main>
             <Footer />
