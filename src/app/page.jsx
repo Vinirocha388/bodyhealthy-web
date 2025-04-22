@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import FrequentlyContainer from "./components/frequentlyContainer";
 import Button from "./components/Button";
 import { FaUserCircle } from "react-icons/fa";
 import Link from "next/link";
@@ -77,21 +78,18 @@ export default function HomePage() {
 
         <div className={styles.frequentlyQuestions}>
           <h1 className={styles.frequentlyQuestionsTitle}>Perguntas Frequentes</h1>
-          <div className={styles.frequentlyQuestionsContainer}>
-            <p className={styles.frequentlyQuestionsText}>
-              Qual o horário de funcionamento?
-            </p>
-          </div>
-          <div className={styles.frequentlyQuestionsContainer}>
-            <p className={styles.frequentlyQuestionsText}>
-              Quais formas de pagamento são aceitas?
-            </p>
-          </div>
-          <div className={styles.frequentlyQuestionsContainer}>
-            <p className={styles.frequentlyQuestionsText}>
-              Consigo fazer uma aula experimental?
-            </p>
-          </div>
+          <FrequentlyContainer
+            question="Qual o horário de funcionamento?"
+            answer="Nosso horário de funcionamento é de segunda a sexta, das 6h às 22h, e aos sábados, das 8h às 14h."
+          />
+          <FrequentlyContainer
+            question="Quais formas de pagamento são aceitas?"
+            answer="Aceitamos cartões de crédito, débito, PIX e pagamentos em dinheiro."
+          />
+          <FrequentlyContainer
+            question="Consigo fazer uma aula experimental?"
+            answer="Sim, oferecemos uma aula experimental gratuita para novos alunos. Entre em contato para agendar!"
+          />
         </div>
 
         <div className={styles.knowMore}>

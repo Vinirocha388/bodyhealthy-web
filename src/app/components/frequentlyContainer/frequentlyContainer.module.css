@@ -1,0 +1,30 @@
+.frequentlyQuestionsContainer {
+    height: 5.3rem;
+    background-color: #ffff;
+    width: 90%;
+    border-radius: 15px;
+    margin: 1rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.frequentlyQuestionsText {
+    font-size: 1.25rem;
+    margin-left: 3rem;
+    margin-top: 0.3rem;
+    font-weight: bold;
+}
+
+.frequentlyQuestionsAnswer {
+    font-size: 1rem;
+    margin-left: 3rem;
+    color: #272727;
+    margin-top: 0.2rem;
+}
+
+@media (max-width: 768px) {
+    .frequentlyQuestionsText {
+        font-size: 1rem;
+    }
+}
