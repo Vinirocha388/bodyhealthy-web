@@ -173,6 +173,10 @@
     .button {
         font-size: 12.5px;
     }
+
+    .knowMoreText {
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
