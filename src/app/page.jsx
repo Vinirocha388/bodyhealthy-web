@@ -1,6 +1,7 @@
 import styles from "./page.module.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Button from "./components/Button";
 import { FaUserCircle } from "react-icons/fa";
 import Link from "next/link";
 
@@ -10,7 +11,6 @@ export default function HomePage() {
       <Header />
 
       <main className={styles.main}>
-        
         <div className={styles.welcome}>
           <p className={styles.welcomeTitle}>
             Bem Vindo
@@ -20,7 +20,7 @@ export default function HomePage() {
               você tenha um excelente uso e uma ótima saúde
             </span>
           </p>
-          <button className={styles.button}>Fazer Login</button>
+          <Button buttonText="Fazer Login" />
         </div>
 
         <div className={styles.whoWeAre}>
@@ -42,15 +42,15 @@ export default function HomePage() {
         <div className={styles.posts}>
           <h1>Post da comunidade</h1>
           <div className={styles.posts1}>
-          <FaUserCircle className={styles.userIcon} size={40} />
-          <h2 className={styles.postTitle}>Ciclano</h2>
-          <p className={styles.postDesc}>"Quem mais ama essa sensação pós-treino? É viciante! "</p>
+            <FaUserCircle className={styles.userIcon} size={40} />
+            <h2 className={styles.postTitle}>Ciclano</h2>
+            <p className={styles.postDesc}>"Quem mais ama essa sensação pós-treino? É viciante! "</p>
           </div>
 
           <div className={styles.posts1}>
-          <FaUserCircle className={styles.userIcon} size={40} />
-          <h2 className={styles.postTitle}>Ciclano</h2>
-          <p className={styles.postDesc}>"Quem mais ama essa sensação pós-treino? É viciante! "</p>
+            <FaUserCircle className={styles.userIcon} size={40} />
+            <h2 className={styles.postTitle}>Ciclano</h2>
+            <p className={styles.postDesc}>"Quem mais ama essa sensação pós-treino? É viciante! "</p>
           </div>
           <Link href={"/postagens"}><button className={styles.postButton}>Ir para Fórum</button></Link>
         </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
               articulações.
             </p>
           </div>
-          <button className={styles.button}>Veja Mais</button>
+          <Button buttonText="Veja Mais" />
         </div>
 
         <div className={styles.frequentlyQuestions}>
@@ -98,7 +98,7 @@ export default function HomePage() {
           <p className={styles.knowMoreText}>
             Conheça nosso app e leve a Body & Healthy com você onde for! 💪
           </p>
-          <button className={styles.button}>Download</button>
+          <Button buttonText="Download" />
         </div>
       </main>
 

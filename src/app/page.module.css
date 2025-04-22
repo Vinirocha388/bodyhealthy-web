@@ -36,23 +36,6 @@
     display: inline-block; 
 }
 
-.button {
-    background-color: #ffff;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 15px;
-    font-weight: bold;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 10px;
-    height: 7.5vh;
-    width: 15vw;
-}
-
 .whoWeAre {
     background-color: #ffff;
     width: 70%;
@@ -158,21 +141,11 @@
     font-weight: bold;
 }
 
-.button:hover {
-    background-color: #FFD700;
-    color: black;
-    transition: 0.3s ease-in-out;
-    transform: scale(1.1);
-}
-
 .posts {
     display: none;
 }
 
 @media (max-width: 1000px) {
-    .button {
-        font-size: 12.5px;
-    }
 
     .knowMoreText {
         font-size: 1rem;
@@ -187,12 +160,6 @@
 
     .welcomeText {
         font-size: 1.25rem;
-    }
-
-    .button {
-        height: 75px;
-        width: 150px;
-        font-size: 12px;
     }
 
     .whoWeAre {
