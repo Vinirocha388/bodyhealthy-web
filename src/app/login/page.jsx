@@ -6,6 +6,7 @@ import styles from "./login.module.css";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Link from "next/link";
+import { compare } from "bcryptjs";
 
 export default function Login() {
   const [emailOrUsername, setEmailOrUsername] = useState("");
@@ -16,7 +17,7 @@ export default function Login() {
   const handleLogin = async () => {
     try {
       // Faz a requisição para o endpoint do backend
-      const response = await fetch("https://bodyhealthy-back.onrender.com/user", {
+      const response = await fetch("http://localhost:4000/user", {
         method: "GET",
       });
 
@@ -28,14 +29,18 @@ export default function Login() {
       }
 
       // Verifica se existe um usuário com o email/username e senha fornecidos
-      const user = users.find(
-        (u) =>
-          (u.email === emailOrUsername || u.userName === emailOrUsername) &&
-          u.password === password
-      );
+      const user = users.find((user) => {
+        return user.email === emailOrUsername || user.userName === emailOrUsername;
+      });
 
       if (!user) {
-        setError("E-mail/nome de usuário ou senha incorretos.");
+        setError("Usuário ou senha inválidos.");
+        return;
+      }
+
+      const isPasswordValid = await compare(password, user.password);
+      if (!isPasswordValid) {
+        setError("Usuário ou senha inválidos.");
         return;
       }
 
