@@ -76,10 +76,11 @@ export default function Login() {
 
           <div className={styles.loginTextDiv}>
             <div className={styles.loginTextCollumn}>
-              <p className={styles.loginText}>Esqueci minha senha</p>
+              <p className={styles.loginTextPassword}>Esqueci minha senha</p>
               <p className={styles.loginText}>
-                Não tem uma conta? <Link href="/cadastro">Se cadastre na Body & Health</Link>
+                Não tem uma conta?
               </p>
+              <p className={styles.loginText}><Link href="/cadastro"> Se cadastre na Body & Health</Link></p>
             </div>
             <div className={styles.buttonDiv}>
               <button className={styles.button} onClick={handleLogin}>Entrar</button>

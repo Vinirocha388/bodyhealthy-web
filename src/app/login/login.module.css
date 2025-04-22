@@ -1,5 +1,6 @@
 .container {
     background-color: black;
+    height: 100vh;
 }
 
 .logoText {
@@ -42,16 +43,25 @@
     margin-bottom: 60px;
 }
 
+.loginTextPassword {
+    font-size: 19px;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
 .loginText {
-    font-size: 20px;
+    font-size: 17px;
     color: white;
     cursor: pointer;
 }
 
-.loginText:hover {
+.loginTextPassword:hover {
     color: #FFD700;
     transition: 0.3s;
 }
+
 
 .buttonDiv {
     display: flex;
@@ -86,6 +96,8 @@
 }
 
 @media (max-width: 768px) {
+
+    
     .logoText {
         font-size: 40px;
     }
@@ -113,10 +125,11 @@
         font-size: 16px;
     }
 
+    .loginTextPassword {
+        font-size: 16px;
+    }   
+
     .loginText {
         font-size: 16px;
-        display: block;
-        margin-bottom: 10px;
-        margin-top: 20px;
     }
 }
