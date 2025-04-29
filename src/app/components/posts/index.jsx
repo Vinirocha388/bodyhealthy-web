@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from "react";
 import { FaHeart, FaRegCommentDots } from "react-icons/fa";
 import styles from "./posts.module.css";
