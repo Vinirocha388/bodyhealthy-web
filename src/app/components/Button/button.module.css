@@ -16,10 +16,9 @@
 }
 
 .button:hover {
-    background-color: #FFD700;
     color: black;
-    transition: 0.3s ease-in-out;
-    transform: scale(1.1);
+    transition: 0.3s ease;
+    transform: scale(1.05);
 }
 
 @media (max-width: 1000px) {
@@ -29,7 +28,6 @@
 }
 
 @media (max-width: 768px) {
-
     .button {
         height: 75px;
         width: 150px;
