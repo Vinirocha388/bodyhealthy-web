@@ -2,6 +2,7 @@ import styles from "./page.module.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import FrequentlyContainer from "./components/frequentlyContainer";
+import ServiceCard from "./components/serviceCard";
 import Button from "./components/Button";
 import { FaUserCircle } from "react-icons/fa";
 import Link from "next/link";
@@ -58,21 +59,14 @@ export default function HomePage() {
 
         <div className={styles.ourServices}>
           <h1 className={styles.ourServicesTitle}>Nossos Serviços</h1>
-          <div className={styles.ourServicesContainer}>
-            <h2 className={styles.exerciseTitle}>Musculação</h2>
-            <p className={styles.exerciseText}>
-              Treinos personalizados com equipamentos modernos e acompanhamento
-              profissional para ganho de força, definição e resistência.
-            </p>
-          </div>
-          <div className={styles.ourServicesContainer}>
-            <h2 className={styles.exerciseTitle}>Natação</h2>
-            <p className={styles.exerciseText}>
-              Treinos de baixo impacto na piscina, perfeitos para
-              condicionamento físico e fortalecimento sem sobrecarregar as
-              articulações.
-            </p>
-          </div>
+          <ServiceCard
+            title="Musculação"
+            text="Treinos personalizados com equipamentos modernos e acompanhamento profissional para ganho de força, definição e resistência."
+          />
+          <ServiceCard
+            title="Natação"
+            text="Treinos de baixo impacto na piscina, perfeitos para condicionamento físico e fortalecimento sem sobrecarregar as articulações."
+          />
           <Button buttonText="Veja Mais" />
         </div>
 
