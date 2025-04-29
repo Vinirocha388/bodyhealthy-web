@@ -11,7 +11,6 @@
 }
 
 .contatoImagem {
-    height: 5m;
     width: 100%;
     background-blend-mode: darken;
     margin-top: 4vh;
@@ -33,9 +32,8 @@
     border-color: #020202;
     border-width: 0.1rem;
     border-style: solid;
-    height: 41rem;
+    height: 45rem;
     border-radius: 2rem;
-    margin-left: 44.3vh;
     margin-top: 3vh;
     display: flex;
     justify-content: center;
