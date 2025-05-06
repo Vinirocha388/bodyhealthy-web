@@ -20,13 +20,13 @@
 .questionSummary {
     cursor: pointer;
     font-size: 1.2rem;
-    color: #c6c6c6;
+    color: #000;
     margin-bottom: 0.5rem;
 }
 
 .questionAnswer {
     font-size: 1rem;
-    color: #c6c6c6;
+    color: #838081;
     line-height: 1.6;
     margin-top: 0.5rem;
 }

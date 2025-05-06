@@ -6,7 +6,7 @@
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: bold;
     margin: 4px 2px;
     cursor: pointer;
@@ -16,6 +16,7 @@
 }
 
 .button:hover {
+    background-color: #ffd700;
     color: black;
     transition: 0.3s ease;
     transform: scale(1.05);

@@ -87,6 +87,11 @@
     margin-top: 10vh;
 }
 
+.contatoEnviar:hover {
+    transition: 0.3s;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .contatoContainer {
         width: 90%;

@@ -52,16 +52,14 @@
 }
 
 .loginText {
-    font-size: 17px;
+    font-size: 19px;
     color: white;
-    cursor: pointer;
 }
 
 .loginTextPassword:hover {
     color: #FFD700;
     transition: 0.3s;
 }
-
 
 .buttonDiv {
     display: flex;
@@ -82,7 +80,7 @@
 
 .button:hover {
     background-color: #FFD700;
-    color: white;
+    color: #000;
     transition: 0.3s;
     cursor: pointer;
 }
