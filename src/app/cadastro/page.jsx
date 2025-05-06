@@ -21,6 +21,8 @@ export default function Cadastro() {
     conditioning: "",
   });
 
+  const url = process.env.NEXT_PUBLIC_API_URL
+
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 
@@ -38,7 +40,7 @@ export default function Cadastro() {
     setSuccess(false);
 
     try {
-      const response = await fetch("https://bodyhealthy-back.onrender.com/user", {
+      const response = await fetch(`${url}/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -53,6 +55,9 @@ export default function Cadastro() {
           sex: formData.sex,
           height: parseFloat(formData.height),
           weight: parseFloat(formData.weight),
+          descriptionObjective: formData.descriptionObjective,
+          restriction: formData.restriction,
+          conditioning: formData.conditioning
         }),
       });
 
