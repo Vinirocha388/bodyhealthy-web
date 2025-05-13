@@ -8,6 +8,7 @@ import Header from "../components/Header";
 import Button from "../components/Button";
 import Link from "next/link";
 import { compare } from "bcryptjs";
+import Titulo from "../components/Titulo";
 
 export default function Login() {
   const [emailOrUsername, setEmailOrUsername] = useState("");
@@ -57,7 +58,9 @@ export default function Login() {
     <div className={styles.container}>
       <Header />
       <main>
-        <h1 className={styles.logoText}>Body & Health</h1>
+        < Titulo
+        title="Body & Health"
+        />
         <div className={styles.inputDiv}>
           <div className={styles.textBox}>
             <input

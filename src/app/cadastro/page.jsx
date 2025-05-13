@@ -4,6 +4,7 @@ import styles from "./cadastro.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { useState } from "react";
+import Titulo from "../components/Titulo";
 
 export default function Cadastro() {
   const [formData, setFormData] = useState({
@@ -77,16 +78,11 @@ export default function Cadastro() {
     <div className={styles.container}>
       <Header />
       <main className={styles.cadastroImagem}>
-        <h1 className={styles.cadastroTitle}>Cadastro</h1>
+        < Titulo
+        title="Cadastro"
+        />
         <div className={styles.cadastroContainer}>
           <div className={styles.cadastroContainerDiv}>
-            <div className={styles.cadastroProfileImage}>
-              <img
-                src="https://images.rawpixel.com/image_png_800/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIzLTAxL3JtNjA5LXNvbGlkaWNvbi13LTAwMi1wLnBuZw.png"
-                alt="Profile"
-                className={styles.cadastroProfileImage}
-              />
-            </div>
 
             <form onSubmit={handleSubmit}>
               <div className={styles.cadastroUsername}>
@@ -94,33 +90,20 @@ export default function Cadastro() {
                 <input
                   name="userName"
                   type="text"
-                  placeholder="Nome de Usuário"
+                  placeholder="Ex: NomeDeUsuario"
                   className={styles.cadastroUsernameInput}
                   value={formData.userName}
                   onChange={handleChange}
                   required
                 />
-              </div>
-
-              <div className={styles.cadastroName}>
-                <h2>Nome:</h2>
-                <input
-                  name="name"
-                  type="text"
-                  placeholder="Nome"
-                  className={styles.cadastroNameInput}
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                />
-              </div>
+              </div>    
 
               <div className={styles.cadastroEmail}>
                 <h2>Email:</h2>
                 <input
                   name="email"
                   type="email"
-                  placeholder="Email"
+                  placeholder="Ex: seuemail@gmail.com"
                   className={styles.cadastroEmailInput}
                   value={formData.email}
                   onChange={handleChange}
@@ -133,7 +116,7 @@ export default function Cadastro() {
                 <input
                   name="password"
                   type="password"
-                  placeholder="Senha"
+                  placeholder="Ex: Senha123"
                   className={styles.cadastroSenhaInput}
                   value={formData.password}
                   onChange={handleChange}
@@ -141,30 +124,32 @@ export default function Cadastro() {
                 />
               </div>
 
-              <div className={styles.cadastroTelefone}>
-                <h2>Telefone:</h2>
-                <input
-                  name="cellPhone"
-                  type="tel"
-                  placeholder="Telefone"
-                  className={styles.cadastroTelefoneInput}
-                  value={formData.cellPhone}
+              <div className={styles.cadastroObjetivo}>
+                <h2>Objetivo:</h2>
+                <textarea
+                  name="descriptionObjective"
+                  placeholder="Ex: Ganho de Massa"
+                  className={styles.cadastroObjetivoInput}
+                  value={formData.descriptionObjective}
                   onChange={handleChange}
-                  required
                 />
               </div>
 
-              <div className={styles.cadastroIdade}>
-                <h2>Idade:</h2>
-                <input
-                  name="age"
-                  type="number"
-                  placeholder="Idade"
-                  className={styles.cadastroIdadeInput}
-                  value={formData.age}
+              <div className={styles.cadastroCondicionamento}>
+                <h2>Nível de Condicionamento:</h2>
+                <select
+                  name="conditioning"
+                  className={styles.cadastroCondicionamentoInput}
+                  value={formData.conditioning}
                   onChange={handleChange}
-                  required
-                />
+                >
+                  <option value="" disabled>
+                    Selecione seu nível de condicionamento
+                  </option>
+                  <option value="Iniciante">Iniciante</option>
+                  <option value="Intermediário">Intermediário</option>
+                  <option value="Avançado">Avançado</option>
+                </select>
               </div>
 
               <div className={styles.cadastroSexo}>
@@ -183,6 +168,19 @@ export default function Cadastro() {
                   <option value="Feminino">Feminino</option>
                   <option value="Outro">Outro</option>
                 </select>
+              </div>
+
+              <div className={styles.cadastroData}>
+                <h2>Data de Nascimento:</h2>
+                <input
+                  name="age"
+                  type="date"
+                  placeholder="Ex: 01/01/2000"
+                  className={styles.cadastroDataInput}
+                  value={formData.age}
+                  onChange={handleChange}
+                  required
+                />
               </div>
 
               <div className={styles.cadastroAltura}>
@@ -211,45 +209,6 @@ export default function Cadastro() {
                   onChange={handleChange}
                   required
                 />
-              </div>
-
-              <div className={styles.cadastroObjetivo}>
-                <h2>Objetivo:</h2>
-                <textarea
-                  name="descriptionObjective"
-                  placeholder="Descreva seu objetivo"
-                  className={styles.cadastroObjetivoInput}
-                  value={formData.descriptionObjective}
-                  onChange={handleChange}
-                />
-              </div>
-
-              <div className={styles.cadastroRestricao}>
-                <h2>Restrições:</h2>
-                <textarea
-                  name="restriction"
-                  placeholder="Descreva suas restrições"
-                  className={styles.cadastroRestricaoInput}
-                  value={formData.restriction}
-                  onChange={handleChange}
-                />
-              </div>
-              
-              <div className={styles.cadastroCondicionamento}>
-                <h2>Nível de Condicionamento:</h2>
-                <select
-                  name="conditioning"
-                  className={styles.cadastroCondicionamentoInput}
-                  value={formData.conditioning}
-                  onChange={handleChange}
-                >
-                  <option value="" disabled>
-                    Selecione seu nível de condicionamento
-                  </option>
-                  <option value="Iniciante">Iniciante</option>
-                  <option value="Intermediário">Intermediário</option>
-                  <option value="Avançado">Avançado</option>
-                </select>
               </div>
 
               <div className={styles.cadastroEnviar}>

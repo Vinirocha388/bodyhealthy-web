@@ -1,13 +1,16 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import styles from "./usuario.module.css";
+import Titulo from "../components/Titulo";
 
 export default function usuario() {
   return (
     <div className={styles.container}>
       <Header />
       <div className={styles.imagemUsuario}>
-        <h1 className={styles.usuarioTitle}>Usuário</h1>
+        < Titulo 
+        title="Usuário"
+        />
 
         <div className={styles.usuarioContainer}>
           <div className={styles.usuarioHeader}>

@@ -1,0 +1,8 @@
+.title {
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 4rem;
+color: white;
+margin-top: 2vh;
+}
