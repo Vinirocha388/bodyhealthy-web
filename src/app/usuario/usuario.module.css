@@ -119,3 +119,51 @@
     height: 5rem;
     border-bottom: 3px solid #ffd700;
 }
+
+@media (max-width: 768px) {
+    .main {
+        width: 90%;
+        margin-left: 5%;
+        height: 27.5rem;
+    }
+
+    .interactions {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 5vh;
+    }
+}
+
+@media (max-width: 576px) {
+    .main {
+        width: 90%;
+        margin-left: 5%;
+        height: 22.5rem;
+    }
+
+    .profileImg {
+        width: 8rem;
+        height: auto;
+    }
+
+    .interactions {
+        width: 90%;
+        margin-left: 5%;
+        margin-bottom: 10vh;
+    }
+
+    .postContainer {
+        width: 100%;
+        height: 25vh;
+    }
+
+    .postContainer2 {
+        width: 100%;
+        height: 25vh;
+    }
+
+    .postIcon {
+        width: 3rem;
+        height: 3rem;
+    }
+}
