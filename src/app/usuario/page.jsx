@@ -6,26 +6,27 @@ export default function usuario() {
   return (
     <div className={styles.container}>
       <Header />
-      <div className={styles.imagemUsuario}>
-        <h1 className={styles.usuarioTitle}>Usuário</h1>
-
-        <div className={styles.usuarioContainer}>
-          <div className={styles.usuarioHeader}>
-            <h2 className={styles.username}>@nomeusuario</h2>
-            <img
-              src="https://www.freeiconspng.com/uploads/white-gear-png-gear-icon-png-white-gear-icon-30.png"
-              alt="gear"
-              className={styles.gearImage}
-            />
-          </div>
-          
-          <div className={styles.usuarioContainerDiv}>
-
-          </div>
+      <h1 className={styles.title}>Usuário</h1>
+      <div className={styles.main}>
+        <p className={styles.username}>@nomeusuario</p>
+        <div className={styles.profileImgContainer}>
+          <img src="https://cdn-icons-png.flaticon.com/512/8847/8847419.png" alt="Imagem de Perfil" className={styles.profileImg} />
         </div>
-
-        <Footer />
+        <p className={styles.greetingsText}>Olá, <span className={styles.name}>Nome Selecionado</span></p>
+        <div className={styles.buttonContainer}>
+          <button className={styles.editProfile}>Editar Perfil</button>
+        </div>
       </div>
+
+      <div className={styles.interactions}>
+        <div className={styles.postContainer}>
+          <img src="https://images.icon-icons.com/2716/PNG/512/squares_four_icon_172869.png" alt="Posts" className={styles.postIcon} />
+        </div>
+        <div className={`${styles.postContainer} ${styles.postContainer2}`}>
+          <img src="https://www.iconpacks.net/icons/2/free-heart-icon-3510-thumb.png" alt="Curtidas" className={styles.postIcon} />
+        </div>
+      </div>
+      <Footer />
     </div>
   );
 }
