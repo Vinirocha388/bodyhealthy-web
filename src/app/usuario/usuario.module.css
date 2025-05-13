@@ -10,26 +10,102 @@
     background-blend-mode: darken;
 }
 
-
-.usuarioTitle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 4rem;
+.title {
     color: white;
+    font-size: 3.5rem;
+    text-align: center;
+    margin-top: 20px;
 }
 
-.usuarioContainer {
+.main {
     background-color: #272727;
-    width: 69%;
+    width: 70%;
     margin-left: 15%;
     background-blend-mode: darken;
-    border-color: #020202;
-    border-width: 0.1rem;   
-    border-style: solid;
-    height: 45rem;
-    border-radius: 2rem;
+    height: 26.5rem;
+    border-radius: 2rem 2rem 0rem 0rem;
     margin-top: 3vh;
+}
+
+.username {
+    color: white;
+    font-size: 1.75rem;
+    text-align: self-start;
+    margin-left: 2.5%;
+    margin-top: 3vh;
+}
+
+.profileImgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profileImg {
+    width: 12rem;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 3vh;
+}
+
+.greetingsText {
+    color: white;
+    font-size: 1.75rem;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.name {
+    color: #ffd700;
+    font-size: 1.75rem;
+    text-align: center;
+    margin-top: 2vh;
+}
+
+.buttonContainer {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.editProfile {
+    background-color: #d9d9d9;
+    color: black;
+    font-size: 1.25rem;
+    width: 10rem;
+    border-radius: 2rem;
+    transition: 0.3s ease;
+    border: black;
+}
+
+.editProfile:hover {
+    background-color: #ffd700;
+    color: black;
+    font-size: 1.25rem;
+    width: 10rem;
+    border-radius: 2rem;
+    cursor: pointer;
+}
+
+.interactions {
+    background-color: #272727;
+    width: 70%;
+    margin-left: 15.6%;
+    background-blend-mode: darken;
+    border-width: 0.1rem;   
+    border-radius: 0rem 0rem 2rem 2rem;
+    gap: 2.5%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.postContainer {
+    background-color: #d9d9d9;
+    width: 50%;
+    height: 30vh;
+    border-radius: 0rem 0rem 0rem 2rem;
     display: flex;
     justify-content: center;
 }
@@ -38,20 +114,10 @@
     color: white;
     font-size: 2.8vh;
     margin-top: 1vh;
-    margin-inline-end: 78%;
-}
-
-.usuarioHeader {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2.5rem;
-    height: 8vh;
-    width: 100%;
+    margin:auto
 }
 
 .gearImage {
-    margin: top;
-    width: 6rem;
-    height: 4.8rem;
+    width: 7rem;
+    height: 5.5rem;;
 }
