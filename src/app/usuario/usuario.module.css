@@ -21,6 +21,7 @@
     flex-direction: column;
     height: 100%;
     border-radius: 0.75rem;
+    border: 2px solid var(--opposite-color);
 }
 
 .secondCollumn {
@@ -30,6 +31,7 @@
     flex-direction: column;
     height: 100%;
     border-radius: 0.75rem;
+    border: 2px solid var(--opposite-color);
 }
 
 .perfilPhotoDiv {
@@ -48,7 +50,7 @@
 }
 
 .perfilPhotoEdit {
-    display: block; 
+    display: block;
     object-fit: cover;
     border-radius: 100%;
     width: 3vw;
@@ -87,7 +89,6 @@
 .secondCollumn {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
 }
 
@@ -105,3 +106,21 @@
     margin-top: 1vh;
 }
 
+.editButton {
+    background-color: #FFD700;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    border: var(--theme-color) 1px solid;
+    align-self: flex-end;
+    margin-right: 2vw;
+    margin-top: 2vh;
+}
+
+.editButton:hover {
+    background-color: #ffcc00;
+}
