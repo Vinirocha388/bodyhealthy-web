@@ -8,10 +8,7 @@ O objetivo deste projeto é criar um sistema de blog administrável, disponível
 
 ### Funcionalidades Principais
 
-- **Criação, edição e exclusão de postagens** com suporte a Markdown
-- **Upload de imagens** integrado ao Cloudinary
 - **Dashboard administrativo** para gerenciamento de conteúdos e usuários
-- **Comentários e curtidas** em postagens
 - **Personalização de layout** com modo escuro/claro
 - **Otimização para SEO** e sitemap dinâmico
 - **Segurança** contra ataques comuns
