@@ -12,10 +12,11 @@
   --toggle-bg-color: #ffffff;
   --toggle-text-color: #1e1e1e;
   --opposite-color: #ffff;
+  --hover-color: #FFD700;
 }
 
 body.light {
-  --bg-color: #f8f8ff;
+  --bg-color: #d6d6d6;
   --text-color: #ffff;
   --section-bg: #f9f9f9;
   --primary-bg: #272727;
@@ -25,6 +26,7 @@ body.light {
   --toggle-bg-color: #1e1e1e;
   --toggle-text-color: #ffffff;
   --opposite-color: #000000;
+  --hover-color: #dcbd0c;
 }
 
 * {

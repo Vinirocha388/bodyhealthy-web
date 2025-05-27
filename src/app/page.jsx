@@ -67,8 +67,9 @@ export default function HomePage() {
             title="Natação"
             text="Treinos de baixo impacto na piscina, perfeitos para condicionamento físico e fortalecimento sem sobrecarregar as articulações."
           />
-          <Button buttonText="Veja Mais" />
-        </div>
+          <Link href="/servicos">
+            <Button buttonText="Veja Mais" />
+          </Link>        </div>
 
         <div className={styles.frequentlyQuestions}>
           <h1 className={styles.frequentlyQuestionsTitle}>Perguntas Frequentes</h1>

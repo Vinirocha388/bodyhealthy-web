@@ -1,35 +1,40 @@
 .treinos {
-    background-color: #373737;
+    background-color: #000;
     width: 60%;
     height: 220px;
     border-radius: 10px;
     margin-left: 20%;
     margin-top: 5vh;
     display: flex;
+    transition: background 0.2s, transform 0.2s, border 0.2s;
+    box-shadow: 0 2px 12px #0002;
 }
 
 .treinosContent {
     flex-direction: column;
-    color: white; 
-    height: 100%; 
-    width: 100%; 
+    color: var(--text-color);
+    height: 100%;
+    width: 100%;
     margin-left: 4%;
 }
 
 .title {
     margin-top: 3vh;
+    color: var(--text-color);
 }
 
 .objective {
     margin-top: 2vh;
+    color: var(--text-color);
 }
 
 .frequency {
     margin-top: 2vh;
+    color: var(--text-color);
 }
 
 .treinos:hover {
-    background-color: #4a4a4a;
+    background-color: var(--card-bg);
     transform: scale(1.02);
     transition: all 0.2s ease-in-out;
     cursor: pointer;

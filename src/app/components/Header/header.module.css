@@ -53,7 +53,7 @@
 }
 
 .navLink:hover {
-    color: #FFD700;
+    color: var(--hover-color);
     transition: all 0.3s ease;
 }
 
@@ -65,7 +65,7 @@
     display: block;
     margin-top: 2px;
     right: 0;
-    background: #FFD700;
+    background: var(--hover-color);
     transition: width 0.3s ease, right 0.3s ease;
 }
 
@@ -75,7 +75,7 @@
 }
 
 .logoText:hover {
-    color: #FFD700;
+    color: var(--hover-color);
     transition: all 0.3s ease;
 }
 
