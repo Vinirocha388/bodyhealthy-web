@@ -2,16 +2,13 @@ import Footer from "../components/Footer";
 import styles from "./contato.module.css";
 import Header from "../components/Header";
 import Button from "../components/Button";
-import Titulo from "../components/Titulo";
 
 export default function contato() {
     return (
         <div className={styles.container}>
             <Header />
             <div className={styles.contatoImagem}>
-                < Titulo
-                title="Contato"
-                />
+                <h1 className={styles.contatoTitle}>Contato</h1>
                 <div className={styles.contatoContainer}>
                     <div className={styles.contatoContainerDiv}>
                         <form action="https://formsubmit.co/miguel.sarti@aluno.senai.br" method="POST" />

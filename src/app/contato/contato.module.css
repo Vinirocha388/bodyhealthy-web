@@ -1,8 +1,6 @@
 .container {
-    width: 100%;
-    height: 50%;
     background-image: url(https://wallpapers.com/images/hd/fitness-gym-and-equipment-photography-dn9w2z4r8yd2wi47.jpg);
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-color: rgba(0, 0, 0, 0.5);
     align-items: center;
@@ -16,29 +14,40 @@
     margin-top: 4vh;
 }
 
+.contatoTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: white;
+    margin-top: 2vh;
+}
 
 .contatoContainer {
-    background-color: rgba(0, 0, 0, 0.9);
-    width: 60%;
-    margin-left: 20%;
+    background-color: var(--primary-bg);
+    width: 70%;
+    margin-left: 15%;
     background-blend-mode: darken;
     border-color: #020202;
     border-width: 0.1rem;
     border-style: solid;
-    height: 45rem;
-    border-radius: 2rem;
+    height: 30rem;
+    border-radius: 0.5rem;
     margin-top: 3vh;
+    margin-bottom: 10vh;
     display: flex;
     justify-content: center;
 }
 
 .contatoContainerDiv {
     position: relative;
-    width: 80%;
+    width: 100%;
     height: 80%;
+    margin-left: 10%;
 }
 
-.contatoNome, .contatoEmail {
+.contatoNome,
+.contatoEmail {
     justify-content: center;
     align-items: center;
     height: 3rem;
@@ -46,31 +55,34 @@
     margin: 6vh;
     font-size: 1.6vh;
     color: white;
+    margin-bottom: 3rem;
 }
 
 .contatoMensagem {
     justify-content: center;
     align-items: center;
-    height: 14rem;
+    height: 5.5rem;
     width: 80%;
     margin: 6vh;
     font-size: 1.6vh;
     color: white;
 }
 
-.contatoNameInput, .contatoEmailInput, .contatoMensagemInput {
+.contatoNameInput,
+.contatoEmailInput,
+.contatoMensagemInput {
     width: 100%;
     height: 100%;
     border-radius: 1rem;
     padding: 1rem;
     margin-top: 5px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.8vh;
+    font-size: 2.3vh;
     border: none;
 }
 
 .contatoMensagemInput {
-    resize: none; 
+    resize: none;
 }
 
 .contatoEnviar {
@@ -78,6 +90,7 @@
     justify-content: center;
     align-items: center;
     margin-top: 10vh;
+    margin-right: 10%;
 }
 
 .contatoEnviar:hover {
