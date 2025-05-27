@@ -17,7 +17,7 @@
     width: 33vw;
     margin-left: 10vw;
     margin-right: 2vw;
-    background-color: var(--primary-bg);
+    background-color: #373737;
     flex-direction: column;
     height: 100%;
     border-radius: 0.75rem;
@@ -26,7 +26,7 @@
 .secondCollumn {
     width: 45vw;
     margin-right: 10vw;
-    background-color: var(--primary-bg);
+    background-color: #373737;
     flex-direction: column;
     height: 100%;
     border-radius: 0.75rem;
@@ -42,18 +42,66 @@
     display: flex;
     object-fit: cover;
     border-radius: 100%;
-    width: 12vw;
-    height: 12vw;
-    margin-left: 9vw;
+    width: 15vw;
+    height: 15vw;
+    margin-left: 8vw;
 }
 
 .perfilPhotoEdit {
     display: block; 
     object-fit: cover;
     border-radius: 100%;
-    width: 2.4vw;
-    height: 2.4vw;
+    width: 3vw;
+    height: 3vw;
     position: relative;
     bottom: 5vh;
     margin-left: 17.8vw;
+    transition: .3s ease;
 }
+
+.perfilPhotoEdit:hover {
+    cursor: pointer;
+}
+
+.firstCollumnTopicTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-left: 7.5%;
+    margin-top: 2vh;
+}
+
+.firstCollumnTopicText {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--theme-color);
+    border: 1px solid var(--theme-color);
+    margin-left: 7.5%;
+    margin-top: 1vh;
+    background-color: var(--opposite-color);
+    width: 85%;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.secondCollumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondCollumnTopicTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 2vh;
+}
+
+.secondCollumnTopicText {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-top: 1vh;
+}
+

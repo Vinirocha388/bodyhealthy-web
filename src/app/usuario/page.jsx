@@ -13,19 +13,19 @@ export default function Usuario() {
           <div className={styles.perfilPhotoDiv}>
             <img
               className={styles.perfilPhoto}
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Lionel-Messi-Argentina-2022-FIFA-World-Cup_sharpness.jpg/250px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_sharpness.jpg"
+              src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
               alt="Foto de perfil do usuário"
             />
             <img
               className={styles.perfilPhotoEdit}
-              src="https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2024/08/26113635/cristiano-ronaldo-futebol-futuro-aposentadoria.jpg"
+              src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png"
               alt="Foto de perfil do usuário"
             />
           </div>
-          <p className={styles.firstCollumnTopicTitle}>Example</p>
-          <p className={styles.firstCollumnTopicText}></p>
-          <p className={styles.firstCollumnTopicTitle}>Example</p>
-          <p className={styles.firstCollumnTopicText}></p>
+          <p className={styles.firstCollumnTopicTitle}>Nome Completo</p>
+          <p className={styles.firstCollumnTopicText}>Ex: Vitor de Almeida Argeri</p>
+          <p className={styles.firstCollumnTopicTitle}>Nome de Usuário:</p>
+          <p className={styles.firstCollumnTopicText}>Ex: Vittorit</p>
         </div>
         <div className={styles.secondCollumn}>
           <div className={styles.editButton}>Edit</div>

@@ -13,6 +13,8 @@
   --toggle-text-color: #1e1e1e;
   --opposite-color: #ffff;
   --hover-color: #FFD700;
+
+  --theme-color: #000;
 }
 
 body.light {
@@ -27,6 +29,8 @@ body.light {
   --toggle-text-color: #ffffff;
   --opposite-color: #000000;
   --hover-color: #dcbd0c;
+
+  --theme-color: #fff;
 }
 
 * {
