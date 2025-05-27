@@ -77,7 +77,7 @@ export default function Cadastro() {
   return (
     <div className={styles.container}>
       <Header />
-      <main className={styles.cadastroImagem}>
+      <main className={styles.cadastro}>
         < Titulo
         title="Cadastro"
         />
@@ -85,6 +85,7 @@ export default function Cadastro() {
           <div className={styles.cadastroContainerDiv}>
 
             <form onSubmit={handleSubmit}>
+              <div className={styles.column01}>
               <div className={styles.cadastroUsername}>
                 <h2>Nome de Usuário:</h2>
                 <input
@@ -127,7 +128,8 @@ export default function Cadastro() {
               <div className={styles.cadastroObjetivo}>
                 <h2>Objetivo:</h2>
                 <textarea
-                  name="descriptionObjective"
+                  name="objective"
+                  type="text"
                   placeholder="Ex: Ganho de Massa"
                   className={styles.cadastroObjetivoInput}
                   value={formData.descriptionObjective}
@@ -151,7 +153,11 @@ export default function Cadastro() {
                   <option value="Avançado">Avançado</option>
                 </select>
               </div>
+          </div>
 
+          <div></div>
+
+          <div className={styles.column02}>
               <div className={styles.cadastroSexo}>
                 <h2>Sexo:</h2>
                 <select
@@ -216,10 +222,12 @@ export default function Cadastro() {
                   Enviar
                 </button>
               </div>
+              </div>
 
               {error && <p className={styles.error}>{error}</p>}
               {success && <p className={styles.success}>Usuário criado com sucesso!</p>}
             </form>
+            
           </div>
         </div>
       </main>
