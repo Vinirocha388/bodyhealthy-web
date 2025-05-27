@@ -59,7 +59,7 @@ export default function Login() {
       <Header />
       <main>
         < Titulo
-        title="Body & Health"
+        title="Faça seu Login"
         />
         <div className={styles.inputDiv}>
           <div className={styles.textBox}>
@@ -87,7 +87,7 @@ export default function Login() {
             <div className={styles.loginTextCollumn}>
               <p className={styles.loginTextPassword}>Esqueci minha senha</p>
               <p className={styles.loginText}>
-                Não tem uma conta? <Link href="/cadastro"> Se cadastre na Body & Health</Link>
+                Não tem uma conta? <br /> <Link href="/cadastro">Se cadastre na Body & Health</Link>
               </p>
             </div>
             <div className={styles.buttonDiv}>
