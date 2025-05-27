@@ -6,3 +6,9 @@ font-size: 4rem;
 color: white;
 margin-top: 2vh;
 }
+
+@media (max-width: 960) {
+    .title {
+        font-size: 2rem;
+    }
+}

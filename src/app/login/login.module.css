@@ -13,6 +13,10 @@
     font-size: 60px;
 }
 
+.inputDiv {
+    padding: 2rem;
+}
+
 .textBox {
     display: flex;
     justify-content: center;
@@ -34,6 +38,7 @@
 .loginTextDiv {
     margin-left: 20%;
     width: 60%;
+    height: 10rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -48,7 +53,6 @@
     color: white;
     cursor: pointer;
     margin-bottom: 20px;
-    margin-top: 20px;
 }
 
 .loginText {
@@ -93,9 +97,7 @@
   font-weight: bold;
 }
 
-@media (max-width: 768px) {
-
-    
+@media (max-width: 1080px) {
     .logoText {
         font-size: 40px;
     }
@@ -106,21 +108,16 @@
         font-size: 16px;
     }
 
-    .textBox {
-        margin-top: 40px;
-    }
-
     .loginTextDiv {
         width: 80%;
         margin-left: 10%;
     }
 
-    .button {
+    .buttonDiv {
         padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        font-size: 16px;
+        padding-bottom: 1px;
+        font-size: 20px;
+        width: 27%;
     }
 
     .loginTextPassword {
@@ -129,5 +126,31 @@
 
     .loginText {
         font-size: 16px;
+    }
+}
+
+
+@media (max-width: 560px) {
+    .textBoxText {
+        width: 100%;
+        font-size: 13px;
+    }
+
+    .loginTextDiv {
+        width: 100%;
+        margin: auto;
+    }
+    
+    .loginTextCollumn {
+        width: 100%;
+    }
+
+    .loginTextPassword, .loginText {
+        font-size: 14px;
+    }
+
+    .buttonDiv {
+        padding-right: 50px;
+        width: 27%;
     }
 }
