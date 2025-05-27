@@ -31,7 +31,7 @@
     border-color: #020202;
     border-width: 0.1rem;
     border-style: solid;
-    height: 30rem;
+    height: 33rem;
     border-radius: 0.5rem;
     margin-top: 3vh;
     margin-bottom: 10vh;
@@ -43,7 +43,6 @@
     position: relative;
     width: 100%;
     height: 80%;
-    margin-left: 10%;
 }
 
 .contatoNome,
@@ -51,21 +50,23 @@
     justify-content: center;
     align-items: center;
     height: 3rem;
+    margin-top: 3vh;
     width: 80%;
-    margin: 6vh;
+    margin-left: 10%;
     font-size: 1.6vh;
     color: white;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
 .contatoMensagem {
     justify-content: center;
     align-items: center;
+    margin-left: 10%;
     height: 5.5rem;
     width: 80%;
-    margin: 6vh;
     font-size: 1.6vh;
     color: white;
+    margin-bottom: 4rem;
 }
 
 .contatoNameInput,
@@ -89,13 +90,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 10vh;
-    margin-right: 10%;
+    padding: 1rem 2rem;
+    margin: 2rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .contatoEnviar:hover {
     transition: 0.3s;
-    cursor: pointer;
+    background-color: var(--primary-color-hover);
 }
 
 @media (max-width: 768px) {
@@ -106,6 +113,7 @@
         justify-content: center;
         align-items: center;
         margin-left: 5%;
+        margin-bottom: 12vh;
     }
 
     .contatoTitle {
@@ -116,6 +124,12 @@
         width: 100%;
         height: 100%;
         margin-left: -15px;
+    }
+
+    .contatoNameInput,
+    .contatoEmailInput,
+    .contatoMensagemInput {
+        font-size: 1.8vh;
     }
 
     .contatoEnviar {
