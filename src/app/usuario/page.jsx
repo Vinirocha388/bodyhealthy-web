@@ -3,30 +3,43 @@ import Footer from "../components/Footer";
 import styles from "./usuario.module.css";
 import Titulo from "../components/Titulo";
 
-export default function usuario() {
+export default function Usuario() {
   return (
     <div className={styles.container}>
       <Header />
-      <h1 className={styles.title}>Usuário</h1>
-      <div className={styles.main}>
-        <p className={styles.username}>@nomeusuario</p>
-        <div className={styles.profileImgContainer}>
-          <img src="https://cdn-icons-png.flaticon.com/512/8847/8847419.png" alt="Imagem de Perfil" className={styles.profileImg} />
+      <Titulo title="Página do Usuário" />
+      <main className={styles.userPage}>
+        <div className={styles.firstCollumn}>
+          <div className={styles.perfilPhotoDiv}>
+            <img
+              className={styles.perfilPhoto}
+              src="https://static.vecteezy.com/system/resources/previews/019/879/186/non_2x/user-icon-on-transparent-background-free-png.png"
+              alt="Foto de perfil do usuário"
+            />
+            <img
+              className={styles.perfilPhotoEdit}
+              src="https://cdn-icons-png.flaticon.com/512/4226/4226577.png"
+              alt="Foto de perfil do usuário"
+            />
+          </div>
+          <p className={styles.firstCollumnTopicTitle}>Nome Completo</p>
+          <p className={styles.firstCollumnTopicText}>Ex: Vitor de Almeida Argeri</p>
+          <p className={styles.firstCollumnTopicTitle}>Nome de Usuário:</p>
+          <p className={styles.firstCollumnTopicText}>Ex: Vittorit</p>
         </div>
-        <p className={styles.greetingsText}>Olá, <span className={styles.name}>Nome Selecionado</span></p>
-        <div className={styles.buttonContainer}>
-          <button className={styles.editProfile}>Editar Perfil</button>
-        </div>
-      </div>
+        <div className={styles.secondCollumn}>
+          <button className={styles.editButton}>Editar</button>
 
-      <div className={styles.interactions}>
-        <div className={styles.postContainer}>
-          <img src="https://images.icon-icons.com/2716/PNG/512/squares_four_icon_172869.png" alt="Posts" className={styles.postIcon} />
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
+
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
+
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
         </div>
-        <div className={`${styles.postContainer} ${styles.postContainer2}`}>
-          <img src="https://www.iconpacks.net/icons/2/free-heart-icon-3510-thumb.png" alt="Curtidas" className={styles.postIcon} />
-        </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );
