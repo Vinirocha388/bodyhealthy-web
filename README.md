@@ -19,9 +19,6 @@ O objetivo deste projeto é criar um sistema de blog administrável, disponível
 ### Tecnologias Utilizadas
 
 - **Next.js** (Web)
-- **React Native** (Mobile)
-- **Cloudinary** (Upload de imagens)
-- **CSS Modules** para estilização
 - **Autenticação e autorização** para áreas administrativas
 
 ## Como rodar o projeto
