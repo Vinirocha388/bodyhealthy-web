@@ -1,22 +1,3 @@
-:root {
-    --bg-color: #000000;
-    --text-color: #ffffff;
-    --section-bg: #1a1a1a;
-    --primary-bg: #1e1e1e;
-    --card-bg: #272727;
-    --button-text-color: #ffffff;
-    --button-bg-color: #ffffff20;
-}
-
-body.light {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --section-bg: #f9f9f9;
-    --primary-bg: #272727;
-    --card-bg: #ffffff;
-    --button-text-color: #ffffff;
-    --button-bg-color: #272727;
-}
 
 .container {
     background-color: var(--bg-color);
@@ -92,6 +73,10 @@ body.light {
     width: 100%;
 }
 
+.ourServicesTitle {
+    color: var(--button-text-color);
+}
+
 .frequentlyQuestions {
     background-color: var(--primary-bg);
     width: 90%;
@@ -142,7 +127,7 @@ body.light {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--text-color);
+    color: var(--joker-bg-color);
     margin-top: 50px;
     gap: 3rem;
 }

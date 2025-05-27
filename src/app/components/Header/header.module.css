@@ -2,9 +2,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: black;
+    background-color: var(--bg-color);
     gap: 2rem;
-    color: white;
+    color: var(--button-text-color);
     padding: 1% 5%;
 }
 
@@ -15,7 +15,7 @@
 
 .home {
     text-decoration: none;
-    color: white;
+    color: var(--button-text-color);
     cursor: pointer;
 }
 
@@ -23,6 +23,7 @@
     font-weight: bold;
     font-size: 30px;
     margin-left: 1rem;
+    color: var(--button-text-color);
 }
 
 .mainNav {
@@ -45,7 +46,7 @@
     font-weight: bold;
     font-size: 20px;
     text-decoration: none;
-    color: #f1f0f0;
+    color: var(--button-text-color);
     position: relative;
     cursor: pointer;
 }
@@ -89,6 +90,35 @@
     display: none;
 }
 
+.themeToggle {
+    background-color: var(--toggle-bg-color);
+    color: var(--toggle-text-color);
+    border: 2px solid var(--toggle-bg-color);
+    padding: 8px 12px;
+    margin-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.themeToggle:hover {
+    background-color: #FFD700;
+    color: #1e1e1e;
+    border-color: #FFD700;
+}
+
+body.light .themeToggle {
+    background-color: #1e1e1e;       
+    color: #fff;                      
+    border: 2px solid #1e1e1e;
+}
+
+body.light .themeToggle:hover {
+    background-color: #FFD700;
+    color: #1e1e1e;
+    border-color: #FFD700;
+}
+
 @media (max-width: 768px) {
     .mainNav {
         display: none;
@@ -123,7 +153,7 @@
         position: absolute;
         top: 80px;
         left: 10px;
-        background-color: #000000;
+        background-color: var(--primary-bg);
         padding: 10px;
         border-radius: 5px;
         box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
@@ -131,28 +161,27 @@
         visibility: hidden;
         z-index: 1;
     }
-    
+
     .dropdownMenu.open {
         opacity: 1;
         visibility: visible;
     }
-    
-    
+
     .dropdownMenu ul {
         list-style: none;
         padding: 0;
         z-index: 999;
     }
-    
+
     .dropdownMenu ul li {
         padding: 10px;
         text-align: center;
         z-index: 999;
     }
-    
+
     .dropdownMenu ul li a {
         text-decoration: none;
-        color: #ffffff;
+        color: var(--text-color);
         font-size: 20px;
         font-weight: bold;
         z-index: 999;

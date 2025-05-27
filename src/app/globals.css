@@ -1,5 +1,30 @@
 @import url('https://fonts.cdnfonts.com/css/catamaran');
 
+:root {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+  --section-bg: #1a1a1a;
+  --primary-bg: #1e1e1e;
+  --card-bg: #272727;
+  --button-text-color: #ffffff;
+  --button-bg-color: #ffffff20;
+  --joker-bg-color: #ffff;
+  --toggle-bg-color: #ffffff;
+  --toggle-text-color: #1e1e1e;
+}
+
+body.light {
+  --bg-color: #f8f8ff;
+  --text-color: #ffff;
+  --section-bg: #f9f9f9;
+  --primary-bg: #272727;
+  --card-bg: #272727;
+  --button-text-color: #000;
+  --joker-bg-color: blue;
+  --toggle-bg-color: #1e1e1e;
+  --toggle-text-color: #ffffff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,5 +34,6 @@
 }
 
 .container {
-  background-color: black;
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
