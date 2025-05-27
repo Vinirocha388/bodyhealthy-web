@@ -3,30 +3,43 @@ import Footer from "../components/Footer";
 import styles from "./usuario.module.css";
 import Titulo from "../components/Titulo";
 
-export default function usuario() {
+export default function Usuario() {
   return (
     <div className={styles.container}>
       <Header />
-      <h1 className={styles.title}>Usuário</h1>
-      <div className={styles.main}>
-        <p className={styles.username}>@nomeusuario</p>
-        <div className={styles.profileImgContainer}>
-          <img src="https://cdn-icons-png.flaticon.com/512/8847/8847419.png" alt="Imagem de Perfil" className={styles.profileImg} />
+      <Titulo title="Página do Usuário" />
+      <main className={styles.userPage}>
+        <div className={styles.firstCollumn}>
+          <div className={styles.perfilPhotoDiv}>
+            <img
+              className={styles.perfilPhoto}
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Lionel-Messi-Argentina-2022-FIFA-World-Cup_sharpness.jpg/250px-Lionel-Messi-Argentina-2022-FIFA-World-Cup_sharpness.jpg"
+              alt="Foto de perfil do usuário"
+            />
+            <img
+              className={styles.perfilPhotoEdit}
+              src="https://fly.metroimg.com/upload/q_85,w_700/https://uploads.metroimg.com/wp-content/uploads/2024/08/26113635/cristiano-ronaldo-futebol-futuro-aposentadoria.jpg"
+              alt="Foto de perfil do usuário"
+            />
+          </div>
+          <p className={styles.firstCollumnTopicTitle}>Example</p>
+          <p className={styles.firstCollumnTopicText}></p>
+          <p className={styles.firstCollumnTopicTitle}>Example</p>
+          <p className={styles.firstCollumnTopicText}></p>
         </div>
-        <p className={styles.greetingsText}>Olá, <span className={styles.name}>Nome Selecionado</span></p>
-        <div className={styles.buttonContainer}>
-          <button className={styles.editProfile}>Editar Perfil</button>
-        </div>
-      </div>
+        <div className={styles.secondCollumn}>
+          <div className={styles.editButton}>Edit</div>
 
-      <div className={styles.interactions}>
-        <div className={styles.postContainer}>
-          <img src="https://images.icon-icons.com/2716/PNG/512/squares_four_icon_172869.png" alt="Posts" className={styles.postIcon} />
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
+
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
+
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
         </div>
-        <div className={`${styles.postContainer} ${styles.postContainer2}`}>
-          <img src="https://www.iconpacks.net/icons/2/free-heart-icon-3510-thumb.png" alt="Curtidas" className={styles.postIcon} />
-        </div>
-      </div>
+      </main>
       <Footer />
     </div>
   );
