@@ -1,10 +1,14 @@
 .container {
     background-color: var(--bg-color);
     height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    flex: 1;
 }
 
 .inputDiv {
     padding: 1.5rem;
+    margin-bottom: 10vh;
 }
 
 .textBox {
@@ -122,6 +126,33 @@
     }
 }
 
+@media (max-width: 768px) {
+    .textBoxText {
+        width: 100%;
+        height: 50px;
+        font-size: 16px;
+    }
+
+    .loginTextDiv {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .buttonDiv {
+        padding-right: 50px;
+        width: 27%;
+    }
+
+    .loginTextPassword,
+    .loginText {
+        font-size: 16px;
+    }
+
+    .inputDiv {
+        margin-bottom: 30vh;
+    }  
+    
+}
 
 @media (max-width: 560px) {
     .textBoxText {
@@ -147,4 +178,8 @@
         padding-right: 50px;
         width: 27%;
     }
+
+    .inputDiv {
+        margin-bottom: 50vh;
+    }  
 }
