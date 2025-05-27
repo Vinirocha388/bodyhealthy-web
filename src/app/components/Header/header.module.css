@@ -6,6 +6,7 @@
     gap: 2rem;
     color: var(--button-text-color);
     padding: 1% 5%;
+    border-bottom: 2px solid black;
 }
 
 .logo {
@@ -104,6 +105,7 @@
 .themeToggle:hover {
     background-color: #FFD700;
     color: #1e1e1e;
+    font-weight: bold;
     border-color: #FFD700;
 }
 

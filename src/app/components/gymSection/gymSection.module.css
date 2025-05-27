@@ -5,7 +5,14 @@
     align-items: flex-start;
     margin-left: 15%;
     flex-direction: column;
-    color: white;
+    color: var(--text-color);
+    background: var(--card-bg);
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #0002;
+    padding: 2.5rem 2rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    transition: background 0.3s, color 0.3s;
 }
 
 .gymTitle {
@@ -14,7 +21,9 @@
     margin-bottom: 1rem;
     text-align: center;
     align-self: center;
-    margin-top: 25px;
+    color: var(--text-color);
+    letter-spacing: 1.5px;
+    text-shadow: 0 2px 12px #0004;
 }
 
 .gymImage {
@@ -23,23 +32,50 @@
     border-radius: 20px;
     margin-bottom: 2rem;
     object-fit: cover;
+    transition: border 0.3s, box-shadow 0.3s;
     border: 2px solid white;
 }
 
 .gymText {
-    font-size: 1.5rem;
-    font-weight: normal;
+    font-size: 1.3rem;
+    font-weight: 400;
     text-align: start;
     padding-left: 0;
     width: 100%;
     margin: 15px 0;
     white-space: pre-wrap;
-    /* Preserve whitespace and line breaks */
+    color: var(--text-color);
+    line-height: 1.7;
+    letter-spacing: 0.5px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+    .gymSection {
+        width: 90%;
+        margin-left: 5%;
+        padding: 1.5rem 1rem;
+    }
     .gymImage {
-        width: 100%;
         height: 300px;
+    }
+    .gymTitle {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .gymSection {
+        width: 98%;
+        margin-left: 1%;
+        padding: 1rem 0.5rem;
+    }
+    .gymImage {
+        height: 180px;
+    }
+    .gymTitle {
+        font-size: 1.3rem;
+    }
+    .gymText {
+        font-size: 1rem;
     }
 }

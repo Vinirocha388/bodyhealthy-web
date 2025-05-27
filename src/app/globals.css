@@ -11,6 +11,7 @@
   --joker-bg-color: #ffff;
   --toggle-bg-color: #ffffff;
   --toggle-text-color: #1e1e1e;
+  --opposite-color: #ffff;
 }
 
 body.light {
@@ -23,6 +24,7 @@ body.light {
   --joker-bg-color: blue;
   --toggle-bg-color: #1e1e1e;
   --toggle-text-color: #ffffff;
+  --opposite-color: #000000;
 }
 
 * {
