@@ -219,7 +219,7 @@ export default function Cadastro() {
                     className={styles.cadastroAlturaInput}
                     value={formData.height}
                     onChange={handleChange}
-                    max="300"
+                    max="1900" // Limite máximo de altura
                     required
                   />
                 </div>
