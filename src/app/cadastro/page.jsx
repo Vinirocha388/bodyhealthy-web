@@ -124,6 +124,19 @@ export default function Cadastro() {
                 />
               </div>
 
+                            <div className={styles.cadastroSenha}>
+                <h2>Telefone:</h2>
+                <input
+                  name="telefone"
+                  type="number"
+                  placeholder="Ex: Senha123"
+                  className={styles.cadastroSenhaInput}
+                  value={formData.telefone}
+                  onChange={handleChange}
+                  required
+                />
+              </div>
+
               <div className={styles.cadastroObjetivo}>
                 <h2>Objetivo:</h2>
                 <textarea

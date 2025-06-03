@@ -29,7 +29,15 @@ export default function Usuario() {
         </div>
         <div className={styles.secondCollumn}>
             <button className={styles.editButton}>Editar</button>
+            
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
 
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
+
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>  
           </div>
       </main>
       <Footer />
