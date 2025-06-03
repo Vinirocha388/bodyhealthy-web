@@ -1,146 +1,145 @@
 .container {
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  background-color: #000;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--bg-color);
+  color: var(--opposite-color);
 }
 
-.column {
-  width: 70%;
-  height: 90%;
-  margin: auto;
-  align-items: center;
+.cadastro {
+  display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
-
-.cadastroUsername,
-.cadastroEmail,
-.cadastroSenha,
-.cadastroData,
-.cadastroSexo,
-.cadastroAltura,
-.cadastroPeso,
-.cadastroObjetivo,
-.cadastroCondicionamento{
-  justify-content: center;
+.cadastroDiv {
+  flex-direction: row;
   align-items: center;
-  height: 6vh;
-  font-size: 1.6vh;
-  color: white;
-  position: relative;
-  margin-top: 60px;
+  justify-content: center;
+  display: flex;
+}
+
+.row {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+  width: 90vw;
+  justify-content: center;
+}
+
+.collumnOne,
+.collumnTwo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.cadastroTopic,
+.cadastroTopicSecondCollumn {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--opposite-color);
+  margin-bottom: 20px;
+}
+
+.topicTitle {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--opposite-color);
+  margin-bottom: 10px;
 }
 
 .cadastroUsernameInput,
 .cadastroEmailInput,
-.cadastroSenhaInput,
-.cadastroDataInput,
-.cadastroSexoInput,
+.cadastroObjetivoInput,
 .cadastroAlturaInput,
 .cadastroPesoInput,
-.cadastroObjetivoInput,
+.cadastroDataInput,
+.cadastroSexoInput,
+.cadastroNivelInput,
 .cadastroCondicionamentoInput {
-  width: 100%;
-  height: 105%;
-  border-radius: 1rem;
-  padding: 0.5rem;
-  margin-top: 0.3vh;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.8vh;
-  background-color: #373737;
-  color: white;
-  box-sizing: border-box;
-  display: block;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  background-color: var(--section-bg);
+  color: var(--opposite-color);
 }
 
-.cadastroEnviar {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 12vh;
-  text-align: center;
-  margin-bottom: 10vh}
+.cadastroUsernameInput,
+.cadastroEmailInput,
+.cadastroObjetivoInput,
+.cadastroNivelInput,
+.cadastroCondicionamentoInput {
+  width: 65vw;
+}
+
+.cadastroObjetivoInput {
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid grey;
+  background-color: var(--section-bg);
+  color: var(--opposite-color);
+  width: 65vw;
+  resize: none;
+}
+
+.cadastroSexoInput,
+.cadastroDataInput,
+.cadastroAlturaInput,
+.cadastroPesoInput {
+  width: 15vw;
+}
 
 .cadastroButton {
-  width: 24vh;
-  height: 8vh;
-  border-radius: 1.6vh;
-  background-color: #ffffff;
-  color: black;
-  font-size: 2.4vh;
+  width: 10%;
+  padding: 20px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  background-color: var(--opposite-color);
+  color: var(--theme-color);
+  font-size: 1rem;
   font-weight: bold;
-  justify-content: center;
-  text-align: center;
+  cursor: pointer;
+  margin-left: 40vw;
+  margin-top: 30px;
+  transition: 0.3s ease;
 }
 
 .cadastroButton:hover {
-  background-color: #FFD700;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.error {
-  color: red;
-  margin-top: 10px;
-}
-
-.success {
-  color: green;
-  margin-top: 10px;
+  background-color: var(--hover-color);
 }
 
 @media (max-width: 900px) {
-  .cadastroContainerDiv {
-    width: 90%;
-    padding: 1rem 0.5rem;
+  .row {
+    margin-top: 3vh;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
   }
+
   .cadastroUsernameInput,
   .cadastroEmailInput,
-  .cadastroSenhaInput,
-  .cadastroDataInput,
-  .cadastroSexoInput,
-  .cadastroAlturaInput,
-  .cadastroPesoInput,
   .cadastroObjetivoInput,
+  .cadastroNivelInput,
   .cadastroCondicionamentoInput {
-    max-width: 100%;
-    font-size: 2vh;
+    width: 90vw;
+  }
+
+  .cadastroSexoInput,
+  .cadastroDataInput,
+  .cadastroAlturaInput,
+  .cadastroPesoInput {
+    width: 90vw;
+  }
+
+  .cadastroButton {
+    width: 50%;
+    margin-left: 25%;
   }
 }
 
 @media (max-width: 600px) {
-  .cadastroContainerDiv {
-    width: 100%;
-    padding: 0.5rem 0.2rem;
-  }
-
-.cadastroUsername,
-.cadastroEmail,
-.cadastroSenha,
-.cadastroData,
-.cadastroSexo,
-.cadastroAltura,
-.cadastroPeso,
-.cadastroObjetivo,
-.cadastroCondicionamento {
-  font-size: 1.5vh;
-}
-
-  .cadastroUsernameInput,
-  .cadastroEmailInput,
-  .cadastroSenhaInput,
-  .cadastroDataInput,
-  .cadastroSexoInput,
-  .cadastroAlturaInput,
-  .cadastroPesoInput,
-  .cadastroObjetivoInput,
-  .cadastroCondicionamentoInput {
-    min-width: 0;
-    font-size: 1.6vh;
-    padding: 0.7rem;
-  }
+  
 }
