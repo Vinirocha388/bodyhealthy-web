@@ -28,17 +28,9 @@ export default function Usuario() {
           <p className={styles.firstCollumnTopicText}>Ex: Vittorit</p>
         </div>
         <div className={styles.secondCollumn}>
-          <button className={styles.editButton}>Editar</button>
+            <button className={styles.editButton}>Editar</button>
 
-          <p className={styles.secondCollumnTopicTitle}>Example</p>
-          <p className={styles.secondCollumnTopicText}>Example</p>
-
-          <p className={styles.secondCollumnTopicTitle}>Example</p>
-          <p className={styles.secondCollumnTopicText}>Example</p>
-
-          <p className={styles.secondCollumnTopicTitle}>Example</p>
-          <p className={styles.secondCollumnTopicText}>Example</p>
-        </div>
+          </div>
       </main>
       <Footer />
     </div>

@@ -111,10 +111,8 @@
     }
 
     .buttonDiv {
-        padding-left: 40px;
-        padding-bottom: 1px;
         font-size: 20px;
-        width: 27%;
+        width: 23%;
     }
 
     .loginTextPassword {
@@ -125,36 +123,33 @@
         font-size: 16px;
     }
 }
-
-@media (max-width: 768px) {
+@media (max-width: 992px) {
     .textBoxText {
-        width: 100%;
+        width: 80%;
         height: 50px;
         font-size: 16px;
     }
 
     .loginTextDiv {
-        width: 100%;
-        margin-left: 0;
+        width: 80%;
+        margin-left: 10%;
     }
 
     .buttonDiv {
-        padding-right: 50px;
+        font-size: 20px;
         width: 27%;
+        justify-content: center;
     }
 
-    .loginTextPassword,
+    .loginTextPassword {
+        font-size: 16px;
+    }
+
     .loginText {
         font-size: 16px;
     }
 
-    .inputDiv {
-        margin-bottom: 30vh;
-    }  
-    
-}
-
-@media (max-width: 560px) {
+@media (max-width: 768px) {
     .textBoxText {
         width: 100%;
         font-size: 13px;
@@ -163,10 +158,14 @@
     .loginTextDiv {
         width: 100%;
         margin: auto;
+        flex-direction: column;
+        margin: 0 auto;
+
     }
 
     .loginTextCollumn {
         width: 100%;
+        margin: 2rem
     }
 
     .loginTextPassword,
@@ -175,11 +174,14 @@
     }
 
     .buttonDiv {
-        padding-right: 50px;
-        width: 27%;
+        width: 50%;
+        height: 20%;
+        display: flex;
+        justify-content: center;  
     }
 
     .inputDiv {
         margin-bottom: 40vh
-    }  
+    }
+}
 }
