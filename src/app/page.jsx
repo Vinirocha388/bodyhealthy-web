@@ -22,7 +22,10 @@ export default function HomePage() {
               você tenha um excelente uso e uma ótima saúde
             </span>
           </p>
-          <Button buttonText="Fazer Login" />
+          <Link href="/login">
+            <Button buttonText="Fazer Login" />
+          </Link>
+
         </div>
 
         <div className={styles.whoWeAre}>
@@ -69,7 +72,8 @@ export default function HomePage() {
           />
           <Link href="/servicos">
             <Button buttonText="Veja Mais" />
-          </Link>        </div>
+          </Link>
+        </div>
 
         <div className={styles.frequentlyQuestions}>
           <h1 className={styles.frequentlyQuestionsTitle}>Perguntas Frequentes</h1>
