@@ -12,6 +12,7 @@ export default function Cadastro() {
     name: "",
     email: "",
     password: "",
+    confirmPassword: "",
     cellPhone: "",
     age: "",
     sex: "",
@@ -40,6 +41,12 @@ export default function Cadastro() {
     setError(null);
     setSuccess(false);
 
+    if (formData.password !== formData.confirmPassword) {
+      setError("As senhas não coincidem.");
+      return;
+    }
+    
+
     try {
       const response = await fetch(`${url}/auth/register`, {
         method: "POST",
@@ -50,7 +57,7 @@ export default function Cadastro() {
           userName: formData.userName,
           name: formData.name,
           email: formData.email,
-          password: formData.password, // Note: In a real app, password should be hashed server-side
+          password: formData.password,
           cellPhone: formData.cellPhone,
           age: parseInt(formData.age),
           sex: formData.sex,
@@ -67,7 +74,6 @@ export default function Cadastro() {
       }
 
       setSuccess(true);
-      // Optionally redirect to conclusion page
       window.location.href = "/";
     } catch (err) {
       setError(err.message);
@@ -138,6 +144,35 @@ export default function Cadastro() {
                     value={formData.descriptionObjective}
                     onChange={handleChange}
                   />
+                </div>
+
+                <div className={styles.cadastroTopic}>
+                  <h2 className={styles.topicTitle}>Senha:</h2>
+                  <input
+                    name="password"
+                    type="password"
+                    placeholder="Digite sua senha"
+                    className={styles.cadastroSenhaInput}
+                    value={formData.password}
+                    onChange={handleChange}
+                    required
+                  />
+                </div>
+
+                <div className={styles.cadastroTopic}>
+                  <h2 className={styles.topicTitle}>Confirmar Senha:</h2>
+                  <input
+                    name="confirmPassword"
+                    type="password"
+                    placeholder="Confirme sua senha"
+                    className={styles.cadastroSenhaInput}
+                    value={formData.confirmPassword || ""}
+                    onChange={handleChange}
+                    required
+                  />
+                  {formData.password !== formData.confirmPassword && (
+                    <p className={styles.passwordError}>As senhas não coincidem.</p>
+                  )}
                 </div>
               </div>
 
@@ -211,8 +246,9 @@ export default function Cadastro() {
               </button>
             </div>
 
-            {error && <p className={styles.error}>{error}</p>}
-            {success && <p className={styles.success}>Usuário criado com sucesso!</p>}
+            {error && formData.password === formData.confirmPassword && (
+              <p className={styles.error}>{error}</p>
+            )}
           </form>
         </div>
       </main>
