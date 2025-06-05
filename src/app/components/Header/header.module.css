@@ -45,7 +45,7 @@
 
 .navLink {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 19.3px;
     text-decoration: none;
     color: var(--button-text-color);
     position: relative;
@@ -144,14 +144,14 @@ body.light .themeToggle:hover {
     }
 
     .logoText {
-        font-size: 18px;
+        font-size: 17px;
         margin-left: 0;
     }
 
     .logo {
         display: flex;
         align-items: center;
-        gap: 25vw;
+        gap: 27.5vw;
     }
 
     .header {
@@ -200,13 +200,25 @@ body.light .themeToggle:hover {
 
 @media (max-width: 650px) {
     .logo {
-        gap: 20vw;
+        gap: 26vw;
+    }
+    .logoText {
+        font-size: 14.5px;
     }
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .logo {
-        gap: 12vw;
+        gap: 20vw;
+    }
+    .logoText {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .logoText {
+        font-size: 11px;
     }
 }
