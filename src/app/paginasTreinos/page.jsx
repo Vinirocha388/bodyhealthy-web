@@ -16,17 +16,20 @@ export default function PaginasTreinos() {
       <main>
         <Titulo title="Hipertrofia" />
         <CardExercicios
-        explication="O treino de peito e tríceps é uma combinação eficaz para desenvolver a força e a massa muscular no peitoral e na parte posterior do braço.
+          explication="O treino de peito e tríceps é uma combinação eficaz para desenvolver a força e a massa muscular no peitoral e na parte posterior do braço.
         Segue abaixo uma breve explicação de cada músculo:"
-        muscleGroup="Peito"
-        muscleGroupExplanation=" É um grupo muscular amplo que contribui para a forma física e a força geral."
-        muscleGroupExplanation2="É responsável pela extensão do cotovelo, importante para diversas atividades."
-        muscleGroup2="Tríceps"
-        titleWorkout="Exercícios de Peito:"
+          muscleGroup="Peito"
+          muscleGroupExplanation="É um grupo muscular amplo que contribui para a forma física e a força geral."
+          muscleGroupExplanation2="É responsável pela extensão do cotovelo, importante para diversas atividades."
+          muscleGroup2="Tríceps"
+          titleWorkout="Exercícios de Peito:"
         >
-          
+          <Exercicios
+            image="https://treinomestre.com.br/wp-content/uploads/2017/08/supino-fechado-cp.jpg"
+            title="Nome: Supino Reto"
+          />
         </CardExercicios>
-  
+
       </main>
       <Footer />
     </div>

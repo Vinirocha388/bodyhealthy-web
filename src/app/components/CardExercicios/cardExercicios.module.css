@@ -8,6 +8,7 @@
     border: 1px solid #ffd700;
     margin-top: 2rem;
     padding: 4rem;
+    flex-direction: column;
 }
 
 .workoutTitle {
