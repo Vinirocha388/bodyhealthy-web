@@ -45,7 +45,7 @@ export default function Cadastro() {
       setError("As senhas não coincidem.");
       return;
     }
-    
+
 
     try {
       const response = await fetch(`${url}/auth/register`, {
@@ -118,35 +118,6 @@ export default function Cadastro() {
                 </div>
 
                 <div className={styles.cadastroTopic}>
-                  <h2 className={styles.topicTitle}>Nível de Condicionamento:</h2>
-                  <select
-                    name="conditioning"
-                    className={styles.cadastroCondicionamentoInput}
-                    value={formData.conditioning}
-                    onChange={handleChange}
-                  >
-                    <option value="" disabled>
-                      Selecione seu nível de condicionamento
-                    </option>
-                    <option value="Iniciante">Iniciante</option>
-                    <option value="Intermediário">Intermediário</option>
-                    <option value="Avançado">Avançado</option>
-                  </select>
-                </div>
-
-                <div className={styles.cadastroTopic}>
-                  <h2 className={styles.topicTitle}>Objetivo:</h2>
-                  <textarea
-                    name="descriptionObjective"
-                    type="text"
-                    placeholder="Ex: Ganho de Massa"
-                    className={styles.cadastroObjetivoInput}
-                    value={formData.descriptionObjective}
-                    onChange={handleChange}
-                  />
-                </div>
-
-                <div className={styles.cadastroTopic}>
                   <h2 className={styles.topicTitle}>Senha:</h2>
                   <input
                     name="password"
@@ -173,6 +144,18 @@ export default function Cadastro() {
                   {formData.password !== formData.confirmPassword && (
                     <p className={styles.passwordError}>As senhas não coincidem.</p>
                   )}
+                </div>
+
+                <div className={styles.cadastroTopic}>
+                  <h2 className={styles.topicTitle}>Objetivo:</h2>
+                  <textarea
+                    name="descriptionObjective"
+                    type="text"
+                    placeholder="Ex: Ganho de Massa"
+                    className={styles.cadastroObjetivoInput}
+                    value={formData.descriptionObjective}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
@@ -207,6 +190,24 @@ export default function Cadastro() {
                     onChange={handleChange}
                     required
                   />
+                </div>
+
+                <div className={styles.cadastroTopicSecondCollumn}>
+                  <h2 className={styles.topicTitle}>Condicionamento:</h2>
+                  <select
+                    name="conditioning"
+                    className={styles.cadastroSexoInput}
+                    value={formData.conditioning}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="" disabled>
+                      Selecione seu condicionamento atual
+                    </option>
+                    <option value="Iniciante">Iniciante</option>
+                    <option value="Intermediário">Intermediário</option>
+                    <option value="Avançado">Avançado</option>
+                  </select>
                 </div>
 
                 <div className={styles.cadastroTopicSecondCollumn}>
