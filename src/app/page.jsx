@@ -81,6 +81,7 @@ export default function HomePage() {
           </p>
           <Button buttonText="Download" />
         </div>
+
       </main>
 
       <Footer />

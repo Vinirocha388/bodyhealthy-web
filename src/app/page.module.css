@@ -137,13 +137,13 @@
     font-weight: bold;
 }
 
-.posts {
-    display: none;
-}
-
 /* Responsividade */
 
 @media (max-width: 1024px) {
+    .knowMore {
+        gap: 1rem;
+    }
+
     .knowMoreText {
         font-size: 1rem;
     }
@@ -177,11 +177,7 @@
     }
 
     .knowMore {
-        display: none;
-    }
-
-    .knowMoreText {
-        font-size: 1.25rem;
+        flex-direction: column;
     }
 
 }
@@ -222,10 +218,22 @@
         height: auto;
         padding: 1rem;
     }
+
+    .knowMore {
+        gap: 1rem;
+    }
+
+    .knowMoreText {
+        font-size: 0.8rem;
+    }
 }
 
 @media (max-width: 480px) {
     .whoWeAreText {
         font-size: 0.8rem;
+    }
+
+    .knowMoreText {
+        font-size: 0.7rem;
     }
 }
