@@ -13,7 +13,7 @@ export default function PaginasTreinos() {
   return ( 
     <div className={styles.container}>
       <Header />
-      <main>
+      <main>  
         <Titulo title="Hipertrofia" />
         <CardExercicios
           explication="O treino de peito e tríceps é uma combinação eficaz para desenvolver a força e a massa muscular no peitoral e na parte posterior do braço.

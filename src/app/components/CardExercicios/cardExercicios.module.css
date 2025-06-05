@@ -42,3 +42,56 @@
     color: #ffd700;
     font-weight: 600;
 }
+
+/* ...existing code... */
+
+@media (max-width: 1300px) {
+    .workoutContainer {
+        width: 95vw;
+        padding: 2rem 1rem;
+        max-width: 100vw;
+        align-items: center; /* Centraliza conteúdo na coluna */
+    }
+    .workoutTitleExercise {
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .workoutMuscleGroup,
+    .workoutMuscleGroup2 {
+        font-size: 1rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .workoutContainer {
+        width: 100vw;
+        padding: 1rem 0.5rem;
+        border-radius: 0.8rem;
+        align-items: center; /* Centraliza conteúdo na coluna */
+    }
+    .workoutTitle {
+        font-size: 1rem;
+        text-align: center;
+        width: 100%;
+    }
+    .workoutMuscleGroup,
+    .workoutMuscleGroup2 {
+        font-size: 0.95rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.3rem;
+        width: 100%;
+    }
+    .workoutTitleExercise {
+        font-size: 1.1rem;
+        text-align: center;
+        width: 100%;
+    }
+}
+
+/* ...existing code... */
