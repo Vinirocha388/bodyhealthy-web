@@ -44,22 +44,6 @@ export default function HomePage() {
           </p>
         </div>
 
-        <div className={styles.posts}>
-          <h1>Post da comunidade</h1>
-          <div className={styles.posts1}>
-            <FaUserCircle className={styles.userIcon} size={40} />
-            <h2 className={styles.postTitle}>Ciclano</h2>
-            <p className={styles.postDesc}>"Quem mais ama essa sensação pós-treino? É viciante! "</p>
-          </div>
-
-          <div className={styles.posts1}>
-            <FaUserCircle className={styles.userIcon} size={40} />
-            <h2 className={styles.postTitle}>Ciclano</h2>
-            <p className={styles.postDesc}>"Quem mais ama essa sensação pós-treino? É viciante! "</p>
-          </div>
-          <Link href={"/postagens"}><button className={styles.postButton}>Ir para Fórum</button></Link>
-        </div>
-
         <div className={styles.ourServices}>
           <h1 className={styles.ourServicesTitle}>Nossos Serviços</h1>
           <ServiceCard
