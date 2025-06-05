@@ -1,0 +1,7 @@
+.container {
+    background-color: var(--bg-color);
+    height: 100vh;
+    margin: 0;
+    flex-direction: column;
+    flex: 1;
+}

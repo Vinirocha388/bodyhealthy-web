@@ -1,0 +1,42 @@
+.workoutContainer {
+    height: 100%;
+    width: 70%;
+    background-color: #272727;
+    display: flex;
+    margin: auto;
+    border-radius: 1.8rem;
+    border: 1px solid #ffd700;
+    margin-top: 2rem;
+    padding: 4rem;
+}
+
+.workoutTitle {
+    color: white;
+    width: 100%;
+    text-align: flex-start;
+}
+
+.workoutMuscleGroup,
+.workoutMuscleGroup2 {
+    margin-top: 2rem;
+    color: white;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.25rem;
+}
+
+.workoutTitleExercise {
+    color: #ffd700;
+    text-align: center;
+    margin-top: 5rem;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+
+.muscleGroupTitle {
+    color: #ffd700;
+}
