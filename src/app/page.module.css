@@ -1,4 +1,3 @@
-
 .container {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -148,12 +147,17 @@
     .knowMoreText {
         font-size: 1rem;
     }
+
     .frequentlyQuestionsTitle {
         font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
+    .welcome {
+        height: 600px;
+    }
+
     .welcomeTitle {
         font-size: 2.5rem;
     }
@@ -179,7 +183,7 @@
     .knowMoreText {
         font-size: 1.25rem;
     }
-    
+
 }
 
 @media (max-width: 630px) {
@@ -217,5 +221,11 @@
         margin-left: 2.5%;
         height: auto;
         padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .whoWeAreText {
+        font-size: 0.8rem;
     }
 }
