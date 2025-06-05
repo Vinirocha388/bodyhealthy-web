@@ -79,7 +79,7 @@ export default function HomePage() {
           <p className={styles.knowMoreText}>
             Conheça nosso app e leve a Body & Healthy com você onde for! 💪
           </p>
-          <Button buttonText="Download" />
+          <Button buttonText="Download"/>
         </div>
 
       </main>
