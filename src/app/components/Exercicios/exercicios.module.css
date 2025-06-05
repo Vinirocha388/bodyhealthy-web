@@ -1,32 +1,84 @@
 .workoutContainer {
-    background-color: #ffffff;
+    background-color: #f0f0f0;
     width: 100%;
     height: 100%;
     /* align-items: center; */
     /* margin: auto; */
-    border: 1px solid #ffd700;
+    border: 3px solid #ffd700;
     margin-top: 4rem;
     display: flex;
-    
 }
 
 .workoutImageContainer {
-    width: 35%;
+    width: 33.3%;
+    border: 3px solid #ffd700;
 }
 
 .workoutImage {
-    width: 400px;
+    width: 392px;
+    display: flex;
+}
+
+.workoutTitle {
+    margin: 1rem
+}
+
+.workout {
+    font-weight: 600;
+    margin: 1rem;
+}
+
+.workoutSelectSeries {
+    width: 20%;
+    flex-direction: row;
+    margin: 0.5rem;
+}
+
+.workoutSelectRepetition {
+    width: 20%;
+    flex-direction: row;
+    margin: 0.5rem;
+}
+
+.option {
+    word-spacing: 5rem;
+}
+
+.workoutRepetitionsNumber {
+    font-weight: 600;
+    margin-top: 1rem;
 }
 
 .workoutInfoContainer {
-    background-color: aqua;
-    width: 35%;
-    display: flex;
-    margin-top: 1rem;
+    width: 33.3%;
+    background-color: #ffffff;
+    justify-content: center;
     text-align: center;
+    border: 3px solid #ffd700;
+    flex-direction: column;
 }
+
+
 .workoutTextContainer{
-    background: #ffd700;
-    width: 30%;
+    background: #ffffff;
+    width: 33.4%;
+    border: 3px solid #ffd700;
+    padding: 1rem;
+}
+
+.workoutTextContent {
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 2.4rem;
+}
+
+.workoutText {
+    font-weight: 600;
     
+}
+
+.topic {
+    color: #ffd700;
 }
