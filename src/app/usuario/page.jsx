@@ -80,7 +80,8 @@ export default function Usuario() {
             {isEditing ? "Salvar" : "Editar"}
           </button>
 
-          <div className={styles.secondCollumnTopicDiv}>
+        <div className={styles.secondCollumnDiv}>
+        <div className={styles.secondCollumnTopicDiv}>
             <p className={styles.secondCollumnTopicTitle}>Telefone</p>
             <input
               className={styles.secondCollumnTopicText}
@@ -130,8 +131,8 @@ export default function Usuario() {
               placeholder="Ex: Emagrecimento"
               disabled={!isEditing}
             />
-
           </div>
+        </div>
         </div>
       </main>
       <Footer />

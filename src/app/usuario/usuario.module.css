@@ -3,6 +3,12 @@
     background-color: var(--bg-color);
 }
 
+.secondCollumnDiv {
+    height: auto;
+    width: 100%;
+    margin-right: 10%;
+}
+
 .userPage {
     display: flex;
     justify-content: center;
@@ -189,6 +195,11 @@
         align-items: center;
         gap: 4vh;
         margin-bottom: 15vh;
+    }
+
+    .secondCollumnDiv {
+        position: relative;
+        bottom: 5vh;
     }
 
     .firstCollumn,
