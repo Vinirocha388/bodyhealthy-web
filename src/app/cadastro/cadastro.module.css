@@ -45,7 +45,7 @@
 }
 
 .topicTitle {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: bold;
   color: var(--opposite-color);
   margin-bottom: 10px;
@@ -95,22 +95,34 @@
 }
 
 .cadastroButton {
-  width: 10%;
-  padding: 20px;
-  border-radius: 5px;
-  border: 1px solid transparent;
-  background-color: var(--opposite-color);
-  color: var(--theme-color);
-  font-size: 1rem;
+  background-color: #fff;
+  border: 2px solid #000;
+  color: black;
+  padding: 0 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; 
+  font-size: 1.1rem;
   font-weight: bold;
+  margin: 4px 2px;
   cursor: pointer;
-  margin-left: 40vw;
-  margin-top: 30px;
-  transition: 0.3s ease;
+  border-radius: 10px;
+  height: 48px;
+  min-width: 120px;
+  width: 17.5vw;
+  max-width: 220px;
+  transition: background 0.3s, color 0.3s, transform 0.3s;
+  box-sizing: border-box;
+  margin-left: 36.25vw;
+  margin-top: 5vh;
 }
 
 .cadastroButton:hover {
-  background-color: var(--hover-color);
+  background-color: #ffd700;
+  color: black;
+  transform: scale(1.05);
 }
 
 .passwordError,
@@ -121,6 +133,12 @@
   font-weight: bold;
 }
 
+@media (max-width: 1024px) {
+  .topicTitle {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 900px) {
   .row {
     margin-top: 3vh;
@@ -129,11 +147,21 @@
     width: 100%;
   }
 
+  .cadastroButton {
+    margin-left: 0;
+    width: 25vw;
+  }
+
+  .topicTitle {
+    font-size: 1.25rem;
+  }
+
   .cadastroUsernameInput,
   .cadastroEmailInput,
   .cadastroObjetivoInput,
   .cadastroNivelInput,
-  .cadastroCondicionamentoInput {
+  .cadastroCondicionamentoInput,
+  .cadastroSenhaInput {
     width: 90vw;
   }
 
@@ -141,13 +169,6 @@
   .cadastroDataInput,
   .cadastroAlturaInput,
   .cadastroPesoInput {
-    width: 90vw;
-  }
-
-  .cadastroButton {
-    width: 50%;
-    margin-left: 25%;
+    width: 75vw;
   }
 }
-
-@media (max-width: 600px) {}
