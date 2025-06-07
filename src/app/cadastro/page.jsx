@@ -139,22 +139,27 @@ export default function Cadastro() {
                       className={styles.cadastroEmailInput}
                       value={formData.cellPhone}
                       onChange={(e) => {
-                        const rawValue = e.target.value.replace(/\D/g, "");
-
-                        let formatted = rawValue;
-
-                        if (rawValue.length <= 2) {
-                          formatted = `(${rawValue}`;
-                        } else if (rawValue.length <= 6) {
-                          formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2)}`;
-                        } else if (rawValue.length <= 10) {
-                          formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2, 7)}-${rawValue.slice(7)}`;
-                        } else {
-                          formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2, 7)}-${rawValue.slice(7, 11)}`;
+                        let rawValue = e.target.value.replace(/\D/g, "");
+                      
+                        if (rawValue.length > 11) {
+                          rawValue = rawValue.slice(0, 11);
                         }
-
+                      
+                        let formatted = "";
+                      
+                        if (rawValue.length === 0) {
+                          formatted = "";
+                        } else if (rawValue.length <= 2) {
+                          formatted = `(${rawValue}`;
+                        } else if (rawValue.length <= 7) {
+                          formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2)}`;
+                        } else {
+                          formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2, 7)}-${rawValue.slice(7)}`;
+                        }
+                      
                         handleChange({ target: { name: "cellPhone", value: formatted } });
                       }}
+                      
                       maxLength={15}
                       required
                     />

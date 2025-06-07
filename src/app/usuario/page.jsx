@@ -19,6 +19,7 @@ export default function Usuario() {
 
   const handleEditClick = () => {
     if (isEditing) {
+      // Aqui você pode salvar os dados
     }
     setIsEditing(!isEditing);
   };
@@ -72,67 +73,90 @@ export default function Usuario() {
 
         <div className={styles.secondCollumn}>
           <button
-
-          
-            className={isEditing ? styles.editButtonOn :  styles.editButton}
+            className={isEditing ? styles.editButtonOn : styles.editButton}
             onClick={handleEditClick}
           >
             {isEditing ? "Salvar" : "Editar"}
           </button>
 
-        <div className={styles.secondCollumnDiv}>
-        <div className={styles.secondCollumnTopicDiv}>
-            <p className={styles.secondCollumnTopicTitle}>Telefone</p>
-            <input
-              className={styles.secondCollumnTopicText}
-              type="tel"
-              value={telephone}
-              onChange={(e) => setTelephone(e.target.value)}
-              placeholder="Ex: (11) 91234-5678"
-              disabled={!isEditing}
-            />
-          </div>
+          <div className={styles.secondCollumnDiv}>
+            <div className={styles.secondCollumnTopicDiv}>
+              <p className={styles.secondCollumnTopicTitle}>Telefone</p>
+              <input
+                className={styles.secondCollumnTopicText}
+                type="tel"
+                value={telephone}
+                onChange={(e) => {
+                  let rawValue = e.target.value.replace(/\D/g, "");
+                
+                  if (!rawValue) {
+                    setTelephone("");
+                    return;
+                  }
+                
+                  if (rawValue.length > 11) {
+                    rawValue = rawValue.slice(0, 11);
+                  }
+                
+                  let formatted = "";
+                
+                  if (rawValue.length <= 2) {
+                    formatted = `(${rawValue}`;
+                  } else if (rawValue.length <= 7) {
+                    formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2)}`;
+                  } else {
+                    formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2, 7)}-${rawValue.slice(7)}`;
+                  }
+                
+                  setTelephone(formatted);
+                }}
+                
+                maxLength={15}
+                placeholder="Ex: (11) 91234-5678"
+                disabled={!isEditing}
+              />
+            </div>
 
-          <div className={styles.secondCollumnTopicDiv}>
-            <p className={styles.secondCollumnTopicTitle}>Condicionamento</p>
-            <select
-              className={styles.secondCollumnTopicText}
-              value={bodyLevel}
-              onChange={(e) => setBodyLevel(e.target.value)}
-              disabled={!isEditing}
-            >
-              <option value="" disabled>
-                Selecione seu nível
-              </option>
-              <option value="Iniciante">Iniciante</option>
-              <option value="Intermediário">Intermediário</option>
-              <option value="Avançado">Avançado</option>
-            </select>
-          </div>
+            <div className={styles.secondCollumnTopicDiv}>
+              <p className={styles.secondCollumnTopicTitle}>Condicionamento</p>
+              <select
+                className={styles.secondCollumnTopicText}
+                value={bodyLevel}
+                onChange={(e) => setBodyLevel(e.target.value)}
+                disabled={!isEditing}
+              >
+                <option value="" disabled>
+                  Selecione seu nível
+                </option>
+                <option value="Iniciante">Iniciante</option>
+                <option value="Intermediário">Intermediário</option>
+                <option value="Avançado">Avançado</option>
+              </select>
+            </div>
 
-          <div className={styles.secondCollumnTopicDiv}>
-            <p className={styles.secondCollumnTopicTitle}>Peso</p>
-            <input
-              className={styles.secondCollumnTopicText}
-              type="number"
-              value={weight}
-              onChange={(e) => setWeight(e.target.value)}
-              placeholder="Ex: 70 (kg)"
-              disabled={!isEditing}
-            />
-          </div>
+            <div className={styles.secondCollumnTopicDiv}>
+              <p className={styles.secondCollumnTopicTitle}>Peso</p>
+              <input
+                className={styles.secondCollumnTopicText}
+                type="number"
+                value={weight}
+                onChange={(e) => setWeight(e.target.value)}
+                placeholder="Ex: 70 (kg)"
+                disabled={!isEditing}
+              />
+            </div>
 
-          <div className={styles.secondCollumnTopicDiv}>
-            <p className={styles.secondCollumnTopicTitle}>Objetivo</p>
-            <textarea
-              className={styles.secondCollumnTopicTextGoal}
-              value={goal}
-              onChange={(e) => setGoal(e.target.value)}
-              placeholder="Ex: Emagrecimento"
-              disabled={!isEditing}
-            />
+            <div className={styles.secondCollumnTopicDiv}>
+              <p className={styles.secondCollumnTopicTitle}>Objetivo</p>
+              <textarea
+                className={styles.secondCollumnTopicTextGoal}
+                value={goal}
+                onChange={(e) => setGoal(e.target.value)}
+                placeholder="Ex: Emagrecimento"
+                disabled={!isEditing}
+              />
+            </div>
           </div>
-        </div>
         </div>
       </main>
       <Footer />
