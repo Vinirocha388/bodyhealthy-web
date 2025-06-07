@@ -133,15 +133,33 @@ export default function Cadastro() {
                   <div className={styles.cadastroTopic}>
                     <h2 className={styles.topicTitle}>Telefone:</h2>
                     <input
-                      name="cellPhone"
                       type="tel"
+                      name="cellPhone"
                       placeholder="Ex: (11) 91234-5678"
                       className={styles.cadastroEmailInput}
                       value={formData.cellPhone}
-                      onChange={handleChange}
+                      onChange={(e) => {
+                        const rawValue = e.target.value.replace(/\D/g, "");
+
+                        let formatted = rawValue;
+
+                        if (rawValue.length <= 2) {
+                          formatted = `(${rawValue}`;
+                        } else if (rawValue.length <= 6) {
+                          formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2)}`;
+                        } else if (rawValue.length <= 10) {
+                          formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2, 7)}-${rawValue.slice(7)}`;
+                        } else {
+                          formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2, 7)}-${rawValue.slice(7, 11)}`;
+                        }
+
+                        handleChange({ target: { name: "cellPhone", value: formatted } });
+                      }}
+                      maxLength={15}
                       required
                     />
                   </div>
+
 
                   <div className={styles.cadastroTopic}>
                     <h2 className={styles.topicTitle}>Senha:</h2>
@@ -173,16 +191,16 @@ export default function Cadastro() {
                   </div>
 
                   <div className={styles.cadastroTopic}>
-                  <h2 className={styles.topicTitle}>Objetivo:</h2>
-                  <textarea
-                    name="descriptionObjective"
-                    type="text"
-                    placeholder="Ex: Ganho de Massa"
-                    className={styles.cadastroObjetivoInput}
-                    value={formData.descriptionObjective}
-                    onChange={handleChange}
-                  />
-                </div>
+                    <h2 className={styles.topicTitle}>Objetivo:</h2>
+                    <textarea
+                      name="descriptionObjective"
+                      type="text"
+                      placeholder="Ex: Ganho de Massa"
+                      className={styles.cadastroObjetivoInput}
+                      value={formData.descriptionObjective}
+                      onChange={handleChange}
+                    />
+                  </div>
                 </div>
 
               </div>
