@@ -19,7 +19,7 @@
     margin-right: 2vw;
     background-color: #373737;
     flex-direction: column;
-    height: 100%;
+    height: 80vh;
     border-radius: 0.75rem;
     border: 2px solid var(--opposite-color);
 }
@@ -29,7 +29,7 @@
     margin-right: 10vw;
     background-color: #373737;
     flex-direction: column;
-    height: 100%;
+    height: 80vh;
     border-radius: 0.75rem;
     border: 2px solid var(--opposite-color);
 }
@@ -92,6 +92,16 @@
     align-items: center;
 }
 
+.secondCollumnTextDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 10%;
+    width: 100%;
+    height: 100%;
+    padding: 2vh 0;
+}
+
 .secondCollumnTopicTitle {
     font-size: 1.5rem;
     font-weight: 600;
@@ -104,6 +114,11 @@
     font-weight: 400;
     color: var(--text-color);
     margin-top: 1vh;
+    background-color: #000;
+    width: 90%;
+    padding-inline: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
 }
 
 .editButton {
