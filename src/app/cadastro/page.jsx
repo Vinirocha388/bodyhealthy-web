@@ -202,7 +202,7 @@ export default function Cadastro() {
                     required
                   >
                     <option value="" disabled>
-                      Selecione seu condicionamento atual
+                      Condicionamento
                     </option>
                     <option value="Iniciante">Iniciante</option>
                     <option value="Intermediário">Intermediário</option>

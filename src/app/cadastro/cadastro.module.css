@@ -22,7 +22,7 @@
   margin-top: 3vh;
   display: flex;
   flex-direction: row;
-  gap: 5vw;
+  gap: 2.5vw;
   width: 90vw;
   justify-content: center;
 }
@@ -66,6 +66,7 @@
   border: 1px solid grey;
   background-color: var(--section-bg);
   color: var(--opposite-color);
+  font-size: 0.75rem;
 }
 
 .cadastroUsernameInput,
@@ -91,7 +92,7 @@
 .cadastroDataInput,
 .cadastroAlturaInput,
 .cadastroPesoInput {
-  width: 15vw;
+  width: 17.5vw;
 }
 
 .cadastroButton {
@@ -139,7 +140,7 @@
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .row {
     margin-top: 3vh;
     flex-direction: column;
