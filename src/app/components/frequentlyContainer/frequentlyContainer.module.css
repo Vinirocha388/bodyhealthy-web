@@ -31,6 +31,21 @@
     margin-top: 0.5rem;
 }
 
+@media (max-width: 1024px) {
+    .questionItem {
+        width: 90%;
+        padding: 1.2rem;
+    }
+
+    .questionSummary {
+        font-size: 1.1rem;
+    }
+
+    .questionAnswer {
+        font-size: 0.95rem;
+    }
+}
+
 @media (max-width: 768px) {
     .questionItem {
         width: 90%;

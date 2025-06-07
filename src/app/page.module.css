@@ -1,4 +1,3 @@
-
 .container {
     background-color: var(--bg-color);
     color: var(--text-color);
@@ -80,19 +79,19 @@
 
 .frequentlyQuestions {
     background-color: var(--primary-bg);
-    width: 90%;
+    width: 70%;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
+    margin-left: 15%;
     margin-top: 60px;
     border-radius: 20px;
     height: 550px;
 }
 
 .frequentlyQuestionsTitle {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
     padding: 1.25rem;
     color: var(--text-color);
 }
@@ -138,19 +137,27 @@
     font-weight: bold;
 }
 
-.posts {
-    display: none;
-}
-
 /* Responsividade */
 
 @media (max-width: 1024px) {
+    .knowMore {
+        gap: 1rem;
+    }
+
     .knowMoreText {
         font-size: 1rem;
+    }
+
+    .frequentlyQuestionsTitle {
+        font-size: 2rem;
     }
 }
 
 @media (max-width: 768px) {
+    .welcome {
+        height: 600px;
+    }
+
     .welcomeTitle {
         font-size: 2.5rem;
     }
@@ -159,73 +166,74 @@
         font-size: 1.25rem;
     }
 
-    .whoWeAre {
-        display: none;
+    .frequentlyQuestionsTitle {
+        font-size: 1.75rem;
+        position: relative;
+        bottom: 5vh;
     }
 
-    .posts {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    .frequentlyQuestions {
+        margin-bottom: 8vh;
+    }
+
+    .knowMore {
         flex-direction: column;
-        background-color: var(--card-bg);
-        border-radius: 20px;
-        gap: 20px;
-        margin-bottom: 40px;
-        width: 80%;
+    }
+
+}
+
+@media (max-width: 630px) {
+    .welcomeTitle {
+        font-size: 2rem;
         margin-left: 10%;
-        margin-top: 5vh;
-        color: var(--text-color);
+        margin-right: 10%;
     }
 
-    .posts h1 {
-        font-size: 1.5rem;
-        margin: 20px 0 0 0;
+    .welcomeText {
+        font-size: 1rem;
     }
 
-    .posts1 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: row;
-        background-color: var(--primary-bg);
-        padding: 10px 20px;
-        margin: 0 10px;
-        color: var(--text-color);
-        gap: 20px;
-        border-radius: 10px;
+    .whoWeAre {
+        width: 90%;
+        margin-left: 5%;
     }
 
-    .postButton {
-        background-color: var(--button-bg-color);
-        padding: 10px 20px;
-        font-size: 15px;
-        border-radius: 30px;
-        color: var(--button-text-color);
-        margin-bottom: 3vh;
+    .whoWeAreTitle {
+        font-size: 2rem;
     }
 
-    .postTitle {
-        font-size: 1.5rem;
-    }
-
-    .postDesc {
-        font-size: 0.5rem;
-    }
-
-    .ourServices {
-        margin-top: 100px;
+    .whoWeAreText {
+        font-size: 1rem;
     }
 
     .frequentlyQuestionsTitle {
         font-size: 1.5rem;
+        position: relative;
+        margin-top: 5vh;
+    }
+
+    .frequentlyQuestions {
+        width: 95%;
+        margin-left: 2.5%;
+        height: auto;
+        padding: 1rem;
     }
 
     .knowMore {
-        display: none;
+        gap: 1rem;
     }
 
     .knowMoreText {
-        font-size: 1.25rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .whoWeAreText {
+        font-size: 0.8rem;
+    }
+
+    .knowMoreText {
+        font-size: 0.7rem;
     }
 }

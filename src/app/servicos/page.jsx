@@ -21,6 +21,7 @@ export default function servicos() {
             </>
           }
         />
+        <div className={styles.line}></div>
         <GymSection
           title="Natação"
           imageSrc="https://www.4fit.com.br/wp-content/uploads/2021/06/4fit-postblog-esportecompleto_blog.jpg"
@@ -35,6 +36,7 @@ export default function servicos() {
             </>
           }
         />
+        <div className={styles.line}></div>
         <GymSection
           title="Luta"
           imageSrc="https://revistabudo.com.br/wp-content/uploads/2022/10/Robson-Conceicao-perde-para-Norte-Americano-em-luta-por-titulo-mundial-de-boxe-1.jpg"
@@ -54,8 +56,8 @@ export default function servicos() {
               com ênfase na disciplina e na autoconfiança.
             </>
           }
-          />
-        </main>
+        />
+      </main>
       <Footer />
     </div>
   );

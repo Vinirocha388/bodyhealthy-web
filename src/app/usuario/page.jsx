@@ -34,31 +34,17 @@ export default function Usuario() {
           <p className={styles.firstCollumnTopicText}>Ex: Vittorit</p>
         </div>
         <div className={styles.secondCollumn}>
-          <button className={styles.editButton}>Editar</button>
+            <button className={styles.editButton}>Editar</button>
+            
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
 
-          <div className={styles.secondCollumnTextDiv}>
-            <p className={styles.secondCollumnTopicTitle}>Example</p>
-            <input
-              className={styles.secondCollumnTopicText}
-              type="text"
-              value={goal}
-              onChange={(e) => setGoal(e.target.value)}
-            />
-            <p className={styles.secondCollumnTopicTitle}>Example</p>
-            <input
-              className={styles.secondCollumnTopicText}
-              type="text"
-              value={bodyLevel}
-              onChange={(e) => setBodyLevel(e.target.value)}
-            />
-            <p className={styles.secondCollumnTopicTitle}>Example</p>
-            <input
-              className={styles.secondCollumnTopicText}
-              type="text"
-              value={weight}
-              onChange={(e) => setWeight(e.target.value)}
-            />          </div>
-        </div>
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>
+
+          <p className={styles.secondCollumnTopicTitle}>Example</p>
+          <p className={styles.secondCollumnTopicText}>Example</p>  
+          </div>
       </main>
       <Footer />
     </div>
