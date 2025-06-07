@@ -64,7 +64,6 @@ export default function Cadastro() {
           height: parseFloat(formData.height),
           weight: parseFloat(formData.weight),
           descriptionObjective: formData.descriptionObjective,
-          restriction: formData.restriction,
           conditioning: formData.conditioning,
         }),
       });
@@ -91,62 +90,89 @@ export default function Cadastro() {
             <div className={styles.row}>
               {/* Primeira coluna */}
               <div className={styles.collumnOne}>
-                <div className={styles.cadastroTopic}>
-                  <h2 className={styles.topicTitle}>Nome de Usuário:</h2>
-                  <input
-                    name="userName"
-                    type="text"
-                    placeholder="Ex: NomeDeUsuario"
-                    className={styles.cadastroUsernameInput}
-                    value={formData.userName}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
+                <div className={styles.collumnOne}>
+                  <div className={styles.cadastroTopic}>
+                    <h2 className={styles.topicTitle}>Nome:</h2>
+                    <input
+                      name="name"
+                      type="text"
+                      placeholder="Ex: João da Silva"
+                      className={styles.cadastroEmailInput}
+                      value={formData.name}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-                <div className={styles.cadastroTopic}>
-                  <h2 className={styles.topicTitle}>Email:</h2>
-                  <input
-                    name="email"
-                    type="email"
-                    placeholder="Ex: seuemail@gmail.com"
-                    className={styles.cadastroEmailInput}
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
+                  <div className={styles.cadastroTopic}>
+                    <h2 className={styles.topicTitle}>Nome de Usuário:</h2>
+                    <input
+                      name="userName"
+                      type="text"
+                      placeholder="Ex: NomeDeUsuario"
+                      className={styles.cadastroEmailInput}
+                      value={formData.userName}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-                <div className={styles.cadastroTopic}>
-                  <h2 className={styles.topicTitle}>Senha:</h2>
-                  <input
-                    name="password"
-                    type="password"
-                    placeholder="Digite sua senha"
-                    className={styles.cadastroSenhaInput}
-                    value={formData.password}
-                    onChange={handleChange}
-                    required
-                  />
-                </div>
+                  <div className={styles.cadastroTopic}>
+                    <h2 className={styles.topicTitle}>Email:</h2>
+                    <input
+                      name="email"
+                      type="email"
+                      placeholder="Ex: seuemail@gmail.com"
+                      className={styles.cadastroEmailInput}
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-                <div className={styles.cadastroTopic}>
-                  <h2 className={styles.topicTitle}>Confirmar Senha:</h2>
-                  <input
-                    name="confirmPassword"
-                    type="password"
-                    placeholder="Confirme sua senha"
-                    className={styles.cadastroSenhaInput}
-                    value={formData.confirmPassword || ""}
-                    onChange={handleChange}
-                    required
-                  />
-                  {formData.password !== formData.confirmPassword && (
-                    <p className={styles.passwordError}>As senhas não coincidem.</p>
-                  )}
-                </div>
+                  <div className={styles.cadastroTopic}>
+                    <h2 className={styles.topicTitle}>Telefone:</h2>
+                    <input
+                      name="cellPhone"
+                      type="tel"
+                      placeholder="Ex: (11) 91234-5678"
+                      className={styles.cadastroEmailInput}
+                      value={formData.cellPhone}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
 
-                <div className={styles.cadastroTopic}>
+                  <div className={styles.cadastroTopic}>
+                    <h2 className={styles.topicTitle}>Senha:</h2>
+                    <input
+                      name="password"
+                      type="password"
+                      placeholder="Digite sua senha"
+                      className={styles.cadastroSenhaInput}
+                      value={formData.password}
+                      onChange={handleChange}
+                      required
+                    />
+                  </div>
+
+                  <div className={styles.cadastroTopic}>
+                    <h2 className={styles.topicTitle}>Confirmar Senha:</h2>
+                    <input
+                      name="confirmPassword"
+                      type="password"
+                      placeholder="Confirme sua senha"
+                      className={styles.cadastroSenhaInput}
+                      value={formData.confirmPassword || ""}
+                      onChange={handleChange}
+                      required
+                    />
+                    {formData.password !== formData.confirmPassword && (
+                      <p className={styles.passwordError}>As senhas não coincidem.</p>
+                    )}
+                  </div>
+
+                  <div className={styles.cadastroTopic}>
                   <h2 className={styles.topicTitle}>Objetivo:</h2>
                   <textarea
                     name="descriptionObjective"
@@ -157,6 +183,8 @@ export default function Cadastro() {
                     onChange={handleChange}
                   />
                 </div>
+                </div>
+
               </div>
 
               {/* Segunda coluna */}

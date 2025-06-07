@@ -86,6 +86,7 @@
   color: var(--opposite-color);
   width: 65vw;
   resize: none;
+  height: 15vh;
 }
 
 .cadastroSexoInput,
