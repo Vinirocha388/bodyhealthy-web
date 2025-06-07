@@ -188,6 +188,7 @@
         height: auto;
         align-items: center;
         gap: 4vh;
+        margin-bottom: 15vh;
     }
 
     .firstCollumn,
@@ -220,6 +221,10 @@
 }
 
 @media (max-width: 600px) {
+
+    .userPage {
+        margin-bottom: 10vh;
+    }
 
     .firstCollumnTopicTitle,
     .secondCollumnTopicTitle {
