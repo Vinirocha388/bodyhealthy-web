@@ -7,50 +7,45 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import Link from "next/link";
-import { compare } from "bcryptjs";
 import Titulo from "../components/Titulo";
+import { useAuth } from "../context/AuthContext"; // Importa o contexto
 
 export default function Login() {
   const [emailOrUsername, setEmailOrUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
   const router = useRouter();
 
+  const { login } = useAuth(); // Usa o login do contexto
+
   const handleLogin = async () => {
+    setError(null);
+
+    if (!emailOrUsername || !password) {
+      setError("Preencha todos os campos.");
+      return;
+    }
+
+    setIsLoading(true);
+
     try {
-      // Faz a requisição para o endpoint do backend
-      const response = await fetch("https://bodyhealthy-back.onrender.com/user", {
-        method: "GET",
-      });
+      const isEmail = emailOrUsername.includes("@");
 
-      const users = await response.json();
+      const result = await login(
+        isEmail ? emailOrUsername : null,
+        password,
+        isEmail ? null : emailOrUsername
+      );
 
-      if (!response.ok) {
-        setError("Erro ao buscar dados do servidor.");
-        return;
+      if (!result.success) {
+        setError(result.message || "Usuário ou senha inválidos.");
       }
-
-      // Verifica se existe um usuário com o email/username e senha fornecidos
-      const user = users.find((user) => {
-        return user.email === emailOrUsername || user.userName === emailOrUsername;
-      });
-
-      if (!user) {
-        setError("Usuário ou senha inválidos.");
-        return;
-      }
-
-      const isPasswordValid = await compare(password, user.password);
-      if (!isPasswordValid) {
-        setError("Usuário ou senha inválidos.");
-        return;
-      }
-
-      // Se o login for bem-sucedido, redireciona para /home
-      router.push("/");
     } catch (err) {
+      console.error("Erro ao fazer login:", err);
       setError("Erro ao conectar com o servidor.");
-      console.error(err);
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -58,9 +53,7 @@ export default function Login() {
     <div className={styles.container}>
       <Header />
       <main>
-        < Titulo
-        title="Faça seu Login"
-        />
+        <Titulo title="Faça seu Login" />
         <div className={styles.inputDiv}>
           <div className={styles.textBox}>
             <input
@@ -69,6 +62,7 @@ export default function Login() {
               className={styles.textBoxText}
               value={emailOrUsername}
               onChange={(e) => setEmailOrUsername(e.target.value)}
+              disabled={isLoading}
             />
           </div>
           <div className={styles.textBox}>
@@ -78,20 +72,34 @@ export default function Login() {
               className={styles.textBoxText}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              disabled={isLoading}
             />
           </div>
 
-          {error && <p className={styles.errorMessage}>{error}</p>}
+          {error && (
+            <div className={styles.errorMessage}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-1-7v2h2v-2h-2zm0-8v6h2V7h-2z" />
+              </svg>
+              <span>{error}</span>
+            </div>
+          )}
 
           <div className={styles.loginTextDiv}>
             <div className={styles.loginTextCollumn}>
-              <p className={styles.loginTextPassword}>Esqueci minha senha</p>
               <p className={styles.loginText}>
-                Não tem uma conta? <br /> <Link href="/cadastro">Se cadastre na Body & Health</Link>
+                Não tem uma conta? <br />{" "}
+                <Link href="/cadastro">Se cadastre na Body & Health</Link>
               </p>
             </div>
-            <div className={styles.buttonDiv}>
-            <Button buttonText="Entrar" />
+            <div className={styles.buttonDiv} onClick={handleLogin}>
+              <Button buttonText={isLoading ? "Entrando..." : "Entrar"} />
             </div>
           </div>
         </div>
