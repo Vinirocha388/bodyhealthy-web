@@ -99,6 +99,10 @@ export function AuthProvider({ children }) {
     localStorage.removeItem("user");
     Cookies.remove("token", { path: "/login" });
     setUser(null);
+    
+    // Disparar um evento global de logout
+    window.dispatchEvent(new Event("logout"));
+    
     router.push("/login");
   };
 

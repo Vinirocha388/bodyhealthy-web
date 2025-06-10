@@ -5,12 +5,13 @@ import styles from "./header.module.css";
 import Link from "next/link";
 import { FaUserCircle } from "react-icons/fa";
 import { MdOutlineMenu } from "react-icons/md";
+import { useAuth } from "@/app/context/AuthContext"; // Importe o hook useAuth
 
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDark, setIsDark] = useState(true);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [userName, setUserName] = useState("");
+    // Use o contexto de autenticação diretamente
+    const { user, isAuthenticated } = useAuth();
 
     useEffect(() => {
         // Verificar tema
@@ -21,20 +22,6 @@ const Header = () => {
         } else {
             document.body.classList.remove("light");
             setIsDark(true);
-        }
-
-        // Verificar login
-        const userStr = localStorage.getItem("user");
-        if (userStr) {
-            try {
-                const userData = JSON.parse(userStr);
-                if (userData && userData.userName) {
-                    setIsLoggedIn(true);
-                    setUserName(userData.userName);
-                }
-            } catch (error) {
-                console.error("Erro ao processar dados do usuário:", error);
-            }
         }
     }, []);
 
@@ -76,8 +63,8 @@ const Header = () => {
                     <li><Link href={"/servicos"} className={styles.navLink}>Serviços</Link></li>
                     <li><Link href={"/treinos"} className={styles.navLink}>Treinos</Link></li>
                     <li>
-                        {isLoggedIn ? (
-                            <Link href={"/usuario"} className={styles.navLink}>{userName}</Link>
+                        {isAuthenticated && user?.userName ? (
+                            <Link href={"/usuario"} className={styles.navLink}>{user.userName}</Link>
                         ) : (
                             <Link href={"/login"} className={styles.navLink}>Login</Link>
                         )}
@@ -98,8 +85,8 @@ const Header = () => {
                         <li><Link href={"/servicos"} className={styles.navLink}>Serviços</Link></li>
                         <li><Link href={"/treinos"} className={styles.navLink}>Treinos</Link></li>
                         <li>
-                            {isLoggedIn ? (
-                                <Link href={"/usuario"} className={styles.navLink}>{userName}</Link>
+                            {isAuthenticated && user?.userName ? (
+                                <Link href={"/usuario"} className={styles.navLink}>{user.userName}</Link>
                             ) : (
                                 <Link href={"/login"} className={styles.navLink}>Login</Link>
                             )}

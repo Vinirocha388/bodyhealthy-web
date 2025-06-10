@@ -31,7 +31,7 @@ export const login = async (credentials = {}) => {
   try {
     const response = await apiClient.post("http://localhost:4000/auth/login", {
       email,
-      userName,
+      username: userName, // use 'username' as the key
       password,
     });
 

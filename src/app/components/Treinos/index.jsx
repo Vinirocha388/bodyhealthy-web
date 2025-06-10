@@ -46,7 +46,7 @@ const Treinos = () => {
                     } else if (err.response.status === 500) {
                         setError("Erro no servidor. Entre em contato com o suporte técnico.");
                     } else {
-                        setError(`Erro ${err.response.status}: ${err.response.data.message || 'Erro desconhecido'}`);
+                        setError('Treino Não Encontrado');
                     }
                 } else {
                     setError("Não foi possível conectar ao servidor. Verifique sua conexão.");
