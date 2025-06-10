@@ -1,3 +1,4 @@
+/* Estilos base da página */
 .treinos {
     background-color: var(--bg-color);
     width: 100%;
@@ -26,6 +27,121 @@
     position: relative;
 }
 
+/* Estilos para o conteúdo principal */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    color: var(--text-color);
+}
+
+.container h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: var(--text-color);
+}
+
+/* Loading e estados de erro */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    font-size: 1.8rem;
+    color: var(--text-color);
+}
+
+.errorContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    padding: 2rem;
+}
+
+.error {
+    background-color: #f44336;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.retryButton {
+    background-color: var(--button-bg-color);
+    color: var(--button-text-color);
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retryButton:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+/* Grid de exercícios */
+.exercisesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.exerciseCard {
+    background-color: var(--card-bg-color, rgba(255, 255, 255, 0.1));
+    border: 1px solid var(--border-color, rgba(255, 255, 255, 0.2));
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.exerciseCard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-color, #007bff);
+}
+
+.exerciseCard h3 {
+    color: var(--text-color);
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    border-bottom: 2px solid var(--accent-color, #007bff);
+    padding-bottom: 0.5rem;
+}
+
+.exerciseCard p {
+    color: var(--text-color);
+    margin-bottom: 0.8rem;
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+.exerciseCard p strong {
+    color: var(--accent-color, #007bff);
+    font-weight: 600;
+}
+
+/* Botões de comentário (caso necessário) */
 .commentButtonDiv {
     display: flex;
     align-items: flex-end;
@@ -40,10 +156,16 @@
     margin-bottom: 1%;
     background-color: var(--button-bg-color);
     color: var(--button-text-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
 .commentButton:hover {
-    cursor: pointer;
+    opacity: 0.9;
+    transform: translateY(-2px);
 }
 
 .commentButtonDiv p {
@@ -51,7 +173,42 @@
     font-size: 1.5rem;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
+    .treinosTitle {
+        font-size: 3rem;
+        margin-left: 5rem;
+    }
+
+    .imagemTreinos {
+        height: 65vh;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .container h2 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .exercisesGrid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .exerciseCard {
+        padding: 1rem;
+    }
+
+    .exerciseCard h3 {
+        font-size: 1.2rem;
+    }
+
+    .exerciseCard p {
+        font-size: 0.9rem;
+    }
 
     .commentButtonDiv p {
         font-size: 1.2rem;
@@ -60,13 +217,30 @@
 
     .commentButton {
         margin-right: 13%;
-    }
-    .treinosTitle {
-        font-size: 3rem;
-        margin-left: 5rem;
+        padding: 0.6rem 1.2rem;
     }
 
-    .imagemTreinos {
-        height: 65vh;
+    .loading, .empty {
+        font-size: 1.2rem;
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .treinosTitle {
+        font-size: 2.5rem;
+        margin-left: 2rem;
+    }
+
+    .container h2 {
+        font-size: 1.8rem;
+    }
+
+    .exerciseCard h3 {
+        font-size: 1.1rem;
+    }
+
+    .exerciseCard p {
+        font-size: 0.85rem;
     }
 }

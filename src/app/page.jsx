@@ -22,9 +22,6 @@ export default function HomePage() {
               você tenha um excelente uso e uma ótima saúde
             </span>
           </p>
-          <Link href="/login">
-            <Button buttonText="Fazer Login" />
-          </Link>
 
         </div>
 
