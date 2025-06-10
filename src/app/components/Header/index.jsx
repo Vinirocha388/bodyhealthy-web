@@ -9,8 +9,11 @@ import { MdOutlineMenu } from "react-icons/md";
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     const [isDark, setIsDark] = useState(true);
+    const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const [userName, setUserName] = useState("");
 
     useEffect(() => {
+        // Verificar tema
         const storedTheme = localStorage.getItem("theme");
         if (storedTheme === "light") {
             document.body.classList.add("light");
@@ -18,6 +21,20 @@ const Header = () => {
         } else {
             document.body.classList.remove("light");
             setIsDark(true);
+        }
+
+        // Verificar login
+        const userStr = localStorage.getItem("user");
+        if (userStr) {
+            try {
+                const userData = JSON.parse(userStr);
+                if (userData && userData.userName) {
+                    setIsLoggedIn(true);
+                    setUserName(userData.userName);
+                }
+            } catch (error) {
+                console.error("Erro ao processar dados do usuário:", error);
+            }
         }
     }, []);
 
@@ -53,18 +70,24 @@ const Header = () => {
                 <FaUserCircle className={styles.userIcon} size={50} color="white" />
             </div>
 
-
             <nav className={styles.mainNav}>
                 <ul>
                     <li><Link href={"/"} className={styles.navLink}>Início</Link></li>
                     <li><Link href={"/servicos"} className={styles.navLink}>Serviços</Link></li>
                     <li><Link href={"/treinos"} className={styles.navLink}>Treinos</Link></li>
-                    <li><Link href={"/login"} className={styles.navLink}>Login</Link></li>
+                    <li>
+                        {isLoggedIn ? (
+                            <Link href={"/usuario"} className={styles.navLink}>{userName}</Link>
+                        ) : (
+                            <Link href={"/login"} className={styles.navLink}>Login</Link>
+                        )}
+                    </li>
                     <li><Link href={"/contato"} className={styles.navLink}>Contato</Link></li>
                     <li>
                         <button onClick={toggleTheme} className={styles.themeToggle}>
                             {isDark ? "☀️ Claro" : "🌙 Escuro"}
-                        </button></li>
+                        </button>
+                    </li>
                 </ul>
             </nav>
 
@@ -74,12 +97,19 @@ const Header = () => {
                         <li><Link href={"/"} className={styles.navLink}>Início</Link></li>
                         <li><Link href={"/servicos"} className={styles.navLink}>Serviços</Link></li>
                         <li><Link href={"/treinos"} className={styles.navLink}>Treinos</Link></li>
-                        <li><Link href={"/login"} className={styles.navLink}>Login</Link></li>
+                        <li>
+                            {isLoggedIn ? (
+                                <Link href={"/usuario"} className={styles.navLink}>{userName}</Link>
+                            ) : (
+                                <Link href={"/login"} className={styles.navLink}>Login</Link>
+                            )}
+                        </li>
                         <li><Link href={"/contato"} className={styles.navLink}>Contato</Link></li>
                         <li>
                             <button onClick={toggleTheme} className={styles.themeToggle}>
                                 {isDark ? "☀️ Claro" : "🌙 Escuro"}
-                            </button></li>
+                            </button>
+                        </li>
                     </ul>
                 </nav>
             )}

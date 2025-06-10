@@ -24,7 +24,7 @@ export default function Usuario() {
     setIsEditing(!isEditing);
   };
 
-  return (
+    return (
     <div className={styles.container}>
       <Header />
       <Titulo title="Página do Usuário" />
