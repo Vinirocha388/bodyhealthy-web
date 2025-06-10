@@ -3,6 +3,93 @@
     background-color: var(--bg-color);
 }
 
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.successMessage {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  animation: fadeOut 3s forwards;
+}
+
+.errorMessage {
+  background-color: #f44336;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.errorMessage button {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+}
+
+.errorContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 100%;
+  color: #ff3333;
+}
+
+.errorContainer button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.successMessage {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 4px;
+  position: fixed;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
 .secondCollumnDiv {
     height: auto;
     width: 100%;
@@ -96,6 +183,32 @@
     color: white;
 }
 
+.buttonGroup {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.refreshButton {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.refreshButton:hover {
+  background-color: #3a80d2;
+}
+
+.refreshButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .secondCollumn {
     display: flex;
     flex-direction: column;
@@ -170,6 +283,8 @@
 
 .logoutButton {
     background-color: rgb(245, 94, 94);
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .editButton:hover {

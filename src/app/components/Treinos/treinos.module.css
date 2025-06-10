@@ -21,6 +21,28 @@
   max-width: 1200px;
 }
 
+.logoutButton {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.logoutButton:hover {
+  background-color: #d32f2f;
+}
+
+.logoutButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
 .loading {
   text-align: center;
   font-size: 1.2rem;

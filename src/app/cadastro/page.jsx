@@ -101,7 +101,15 @@ export default function Cadastro() {
         <Titulo title="Cadastro" />
 
         <div className={styles.cadastroDiv}>
-          <form onSubmit={handleSubmit}>
+          <form
+            onSubmit={async (e) => {
+              await handleSubmit(e);
+              // Só redireciona se não houver erro
+              if (!error) {
+                router.push("/conclusao");
+              }
+            }}
+          >
             <div className={styles.row}>
               {/* Primeira coluna */}
               <div className={styles.collumnOne}>
