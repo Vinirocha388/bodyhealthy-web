@@ -66,7 +66,7 @@
   border: 1px solid grey;
   background-color: var(--section-bg);
   color: var(--opposite-color);
-  font-size: 0.75rem;
+  font-size: 0.83rem;
 }
 
 .cadastroUsernameInput,
@@ -150,7 +150,7 @@
   .cadastroDataInput,
   .cadastroAlturaInput,
   .cadastroPesoInput {
-    font-size: 1rem;
+    font-size: 0.75rem;
   }
 
 }
@@ -179,6 +179,7 @@
   .cadastroCondicionamentoInput,
   .cadastroSenhaInput {
     width: 90vw;
+    font-size: 1rem;
   }
 
   .cadastroSexoInput,
@@ -186,5 +187,7 @@
   .cadastroAlturaInput,
   .cadastroPesoInput {
     width: 75vw;
+    font-size: 1rem;
+
   }
 }

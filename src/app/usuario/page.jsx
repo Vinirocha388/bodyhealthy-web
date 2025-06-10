@@ -14,9 +14,10 @@ export default function Usuario() {
   const [telephone, setTelephone] = useState("");
   const [password, setPassword] = useState("");
   const [gender, setGender] = useState("")
-  const [date, setDate] = useState("")
+  const [age, setAge] = useState("")
   const [restrictions, setRestrictions] = useState("")
   const [height, setHeight] = useState("")
+  const [username, setUsername] = useState("")
 
   const [isEditing, setIsEditing] = useState(false);
 
@@ -53,7 +54,16 @@ export default function Usuario() {
             placeholder="Ex: Miguel Sarti"
             disabled={!isEditing}
           />
-          <p className={styles.firstCollumnTopicTitle}>Email:</p>
+          <p className={styles.firstCollumnTopicTitle}>Nome de Usuário</p>
+          <input
+            className={styles.firstCollumnTopicText}
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Ex: miguel_sarti"
+            disabled={!isEditing}
+          />
+          <p className={styles.firstCollumnTopicTitle}>Email</p>
           <p className={styles.firstCollumnTopicText}>Ex: example@gmail.com</p>
           <p className={styles.firstCollumnTopicTitle}>Senha:</p>
           <input
@@ -66,13 +76,13 @@ export default function Usuario() {
           />
           <div className={styles.ageAndGender}>
             <div className={styles.firstCollumnPart}>
-              <p className={styles.firstCollumnTopicTitle}>Data de Nascimento:</p>
+              <p className={styles.firstCollumnTopicTitle}>Idade</p>
               <input
                 className={styles.firstCollumnTopicText}
-                type="date"
-                value={date}
-                onChange={(e) => setDate(e.target.value)}
-                placeholder="*******"
+                type="number"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+                placeholder="Ex: 18"
                 disabled={!isEditing}
               />
             </div>

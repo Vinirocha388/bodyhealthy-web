@@ -65,6 +65,7 @@ export default function Cadastro() {
           weight: parseFloat(formData.weight),
           descriptionObjective: formData.descriptionObjective,
           conditioning: formData.conditioning,
+          restriction: formData.restriction,
         }),
       });
 
@@ -165,7 +166,6 @@ export default function Cadastro() {
                     />
                   </div>
 
-
                   <div className={styles.cadastroTopic}>
                     <h2 className={styles.topicTitle}>Senha:</h2>
                     <input
@@ -193,6 +193,19 @@ export default function Cadastro() {
                     {formData.password !== formData.confirmPassword && (
                       <p className={styles.passwordError}>As senhas não coincidem.</p>
                     )}
+                  </div>
+
+                  <div className={styles.cadastroTopic}>
+                    <h2 className={styles.topicTitle}>Restrições</h2>
+                    <input
+                      name="restriction"
+                      type="text"
+                      placeholder="Coloque suas restrições"
+                      className={styles.cadastroSenhaInput}
+                      value={formData.restriction}
+                      onChange={handleChange}
+                      required
+                    />
                   </div>
 
                   <div className={styles.cadastroTopic}>
