@@ -78,7 +78,7 @@ export default function Cadastro() {
           descriptionObjective: formData.descriptionObjective,
           restriction: formData.restriction,
           conditioning: formData.conditioning,
-          imageProfile: "",
+          restriction: formData.restriction,
         }),
       });
 
@@ -200,6 +200,7 @@ export default function Cadastro() {
                     <p className={styles.passwordError}>As senhas não coincidem.</p>
                   )}
                 </div>
+
 
                 <div className={styles.cadastroTopic}>
                   <h2 className={styles.topicTitle}>Objetivo:</h2>

@@ -5,26 +5,35 @@ import Footer from "../components/Footer";
 import styles from "./usuario.module.css";
 import Titulo from "../components/Titulo";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Usuario() {
+  const router = useRouter();
+
   const [goal, setGoal] = useState("");
   const [bodyLevel, setBodyLevel] = useState("");
   const [weight, setWeight] = useState("");
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [telephone, setTelephone] = useState("");
   const [password, setPassword] = useState("");
+  const [gender, setGender] = useState("")
+  const [age, setAge] = useState("")
+  const [restrictions, setRestrictions] = useState("")
+  const [height, setHeight] = useState("")
+  const [username, setUsername] = useState("")
 
   const [isEditing, setIsEditing] = useState(false);
 
   const handleEditClick = () => {
     if (isEditing) {
-      // Aqui você pode salvar os dados
     }
     setIsEditing(!isEditing);
   };
 
-    return (
+  const handleLogout = () => {
+    router.push("/login"); 
+  };
+  return (
     <div className={styles.container}>
       <Header />
       <Titulo title="Página do Usuário" />
@@ -48,18 +57,20 @@ export default function Usuario() {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Ex: Maicon Oliveira dos Santos"
+            placeholder="Ex: Miguel Sarti"
             disabled={!isEditing}
           />
-          <p className={styles.firstCollumnTopicTitle}>Email:</p>
+          <p className={styles.firstCollumnTopicTitle}>Nome de Usuário</p>
           <input
             className={styles.firstCollumnTopicText}
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Ex: example@gmail.com"
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Ex: miguel_sarti"
             disabled={!isEditing}
           />
+          <p className={styles.firstCollumnTopicTitle}>Email</p>
+          <p className={styles.firstCollumnTopicText}>Ex: example@gmail.com</p>
           <p className={styles.firstCollumnTopicTitle}>Senha:</p>
           <input
             className={styles.firstCollumnTopicText}
@@ -69,6 +80,35 @@ export default function Usuario() {
             placeholder="*******"
             disabled={!isEditing}
           />
+          <div className={styles.ageAndGender}>
+            <div className={styles.firstCollumnPart}>
+              <p className={styles.firstCollumnTopicTitle}>Idade</p>
+              <input
+                className={styles.firstCollumnTopicText}
+                type="number"
+                value={age}
+                onChange={(e) => setAge(e.target.value)}
+                placeholder="Ex: 18"
+                disabled={!isEditing}
+              />
+            </div>
+            <div className={styles.firstCollumnPart}>
+              <p className={styles.firstCollumnTopicTitle}>Condicionamento</p>
+              <select
+                className={styles.firstCollumnTopicText}
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                disabled={!isEditing}
+              >
+                <option value="" disabled>
+                  Gênero
+                </option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <div className={styles.secondCollumn}>
@@ -88,18 +128,18 @@ export default function Usuario() {
                 value={telephone}
                 onChange={(e) => {
                   let rawValue = e.target.value.replace(/\D/g, "");
-                
+
                   if (!rawValue) {
                     setTelephone("");
                     return;
                   }
-                
+
                   if (rawValue.length > 11) {
                     rawValue = rawValue.slice(0, 11);
                   }
-                
+
                   let formatted = "";
-                
+
                   if (rawValue.length <= 2) {
                     formatted = `(${rawValue}`;
                   } else if (rawValue.length <= 7) {
@@ -107,10 +147,10 @@ export default function Usuario() {
                   } else {
                     formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2, 7)}-${rawValue.slice(7)}`;
                   }
-                
+
                   setTelephone(formatted);
                 }}
-                
+
                 maxLength={15}
                 placeholder="Ex: (11) 91234-5678"
                 disabled={!isEditing}
@@ -147,6 +187,30 @@ export default function Usuario() {
             </div>
 
             <div className={styles.secondCollumnTopicDiv}>
+              <p className={styles.secondCollumnTopicTitle}>Altura</p>
+              <input
+                className={styles.secondCollumnTopicText}
+                type="number"
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+                placeholder="Ex: 180 (cm)"
+                disabled={!isEditing}
+              />
+            </div>
+
+            <div className={styles.secondCollumnTopicDiv}>
+              <p className={styles.secondCollumnTopicTitle}>Restrições</p>
+              <input
+                type="text"
+                className={styles.secondCollumnTopicText}
+                value={restrictions}
+                onChange={(e) => setRestrictions(e.target.value)}
+                placeholder="Ex: Leite"
+                disabled={!isEditing}
+              />
+            </div>
+
+            <div className={styles.secondCollumnTopicDiv}>
               <p className={styles.secondCollumnTopicTitle}>Objetivo</p>
               <textarea
                 className={styles.secondCollumnTopicTextGoal}
@@ -157,6 +221,12 @@ export default function Usuario() {
               />
             </div>
           </div>
+          <button
+              className={styles.logoutButton}
+              onClick={handleLogout}
+            >
+              Sair
+            </button>
         </div>
       </main>
       <Footer />
