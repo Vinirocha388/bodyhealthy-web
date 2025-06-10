@@ -53,18 +53,20 @@
     border-radius: 100%;
     width: 15vw;
     height: 15vw;
-    margin-left: 8vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
 }
 
 .perfilPhotoEdit {
     display: block;
     object-fit: cover;
-    border-radius: 100%;
     width: 3vw;
     height: 3vw;
     position: relative;
     bottom: 5vh;
-    margin-left: 17.8vw;
+    margin-left: 20vw;
     transition: .3s ease;
 }
 
@@ -265,6 +267,6 @@
         width: 70%;
         font-size: 1rem;
         padding: 8px 16px;
-        top: 85vh;
+        top: 87.5vh;
     }
 }
