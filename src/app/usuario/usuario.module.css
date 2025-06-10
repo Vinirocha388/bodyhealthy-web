@@ -152,7 +152,8 @@
 }
 
 
-.editButton {
+.editButton,
+.logoutButton {
     background-color: white;
     color: black;
     font-weight: bold;
@@ -165,6 +166,10 @@
     align-self: flex-end;
     margin-right: 2vw;
     margin-top: 2vh;
+}
+
+.logoutButton {
+    background-color: rgb(245, 94, 94);
 }
 
 .editButton:hover {
@@ -229,8 +234,17 @@
         margin-right: 0;
         width: 50%;
         position: relative;
-        top: 95vh;
+        top: 92.5vh;
         z-index: 1;
+    }
+
+    .logoutButton {
+        align-self: center;
+        margin-right: 0;
+        width: 25%;
+        position: relative;
+        z-index: 1;
+        top: 10vh;
     }
 }
 
@@ -267,6 +281,6 @@
         width: 70%;
         font-size: 1rem;
         padding: 8px 16px;
-        top: 87.5vh;
+        top: 82.5vh;
     }
 }

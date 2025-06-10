@@ -5,8 +5,11 @@ import Footer from "../components/Footer";
 import styles from "./usuario.module.css";
 import Titulo from "../components/Titulo";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 export default function Usuario() {
+  const router = useRouter();
+
   const [goal, setGoal] = useState("");
   const [bodyLevel, setBodyLevel] = useState("");
   const [weight, setWeight] = useState("");
@@ -27,6 +30,9 @@ export default function Usuario() {
     setIsEditing(!isEditing);
   };
 
+  const handleLogout = () => {
+    router.push("/login"); 
+  };
   return (
     <div className={styles.container}>
       <Header />
@@ -215,6 +221,12 @@ export default function Usuario() {
               />
             </div>
           </div>
+          <button
+              className={styles.logoutButton}
+              onClick={handleLogout}
+            >
+              Sair
+            </button>
         </div>
       </main>
       <Footer />
