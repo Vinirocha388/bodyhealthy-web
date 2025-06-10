@@ -11,15 +11,17 @@ export default function Usuario() {
   const [bodyLevel, setBodyLevel] = useState("");
   const [weight, setWeight] = useState("");
   const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
   const [telephone, setTelephone] = useState("");
   const [password, setPassword] = useState("");
+  const [gender, setGender] = useState("")
+  const [date, setDate] = useState("")
+  const [restrictions, setRestrictions] = useState("")
+  const [height, setHeight] = useState("")
 
   const [isEditing, setIsEditing] = useState(false);
 
   const handleEditClick = () => {
     if (isEditing) {
-      // Aqui você pode salvar os dados
     }
     setIsEditing(!isEditing);
   };
@@ -48,18 +50,11 @@ export default function Usuario() {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            placeholder="Ex: Maicon Oliveira dos Santos"
+            placeholder="Ex: Miguel Sarti"
             disabled={!isEditing}
           />
           <p className={styles.firstCollumnTopicTitle}>Email:</p>
-          <input
-            className={styles.firstCollumnTopicText}
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Ex: example@gmail.com"
-            disabled={!isEditing}
-          />
+          <p className={styles.firstCollumnTopicText}>Ex: example@gmail.com</p>
           <p className={styles.firstCollumnTopicTitle}>Senha:</p>
           <input
             className={styles.firstCollumnTopicText}
@@ -69,6 +64,35 @@ export default function Usuario() {
             placeholder="*******"
             disabled={!isEditing}
           />
+          <div className={styles.ageAndGender}>
+            <div className={styles.firstCollumnPart}>
+              <p className={styles.firstCollumnTopicTitle}>Data de Nascimento:</p>
+              <input
+                className={styles.firstCollumnTopicText}
+                type="date"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                placeholder="*******"
+                disabled={!isEditing}
+              />
+            </div>
+            <div className={styles.firstCollumnPart}>
+              <p className={styles.firstCollumnTopicTitle}>Condicionamento</p>
+              <select
+                className={styles.firstCollumnTopicText}
+                value={gender}
+                onChange={(e) => setGender(e.target.value)}
+                disabled={!isEditing}
+              >
+                <option value="" disabled>
+                  Gênero
+                </option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+                <option value="Outro">Outro</option>
+              </select>
+            </div>
+          </div>
         </div>
 
         <div className={styles.secondCollumn}>
@@ -88,18 +112,18 @@ export default function Usuario() {
                 value={telephone}
                 onChange={(e) => {
                   let rawValue = e.target.value.replace(/\D/g, "");
-                
+
                   if (!rawValue) {
                     setTelephone("");
                     return;
                   }
-                
+
                   if (rawValue.length > 11) {
                     rawValue = rawValue.slice(0, 11);
                   }
-                
+
                   let formatted = "";
-                
+
                   if (rawValue.length <= 2) {
                     formatted = `(${rawValue}`;
                   } else if (rawValue.length <= 7) {
@@ -107,10 +131,10 @@ export default function Usuario() {
                   } else {
                     formatted = `(${rawValue.slice(0, 2)}) ${rawValue.slice(2, 7)}-${rawValue.slice(7)}`;
                   }
-                
+
                   setTelephone(formatted);
                 }}
-                
+
                 maxLength={15}
                 placeholder="Ex: (11) 91234-5678"
                 disabled={!isEditing}
@@ -142,6 +166,30 @@ export default function Usuario() {
                 value={weight}
                 onChange={(e) => setWeight(e.target.value)}
                 placeholder="Ex: 70 (kg)"
+                disabled={!isEditing}
+              />
+            </div>
+
+            <div className={styles.secondCollumnTopicDiv}>
+              <p className={styles.secondCollumnTopicTitle}>Altura</p>
+              <input
+                className={styles.secondCollumnTopicText}
+                type="number"
+                value={height}
+                onChange={(e) => setHeight(e.target.value)}
+                placeholder="Ex: 180 (cm)"
+                disabled={!isEditing}
+              />
+            </div>
+
+            <div className={styles.secondCollumnTopicDiv}>
+              <p className={styles.secondCollumnTopicTitle}>Restrições</p>
+              <input
+                type="text"
+                className={styles.secondCollumnTopicText}
+                value={restrictions}
+                onChange={(e) => setRestrictions(e.target.value)}
+                placeholder="Ex: Leite"
                 disabled={!isEditing}
               />
             </div>
