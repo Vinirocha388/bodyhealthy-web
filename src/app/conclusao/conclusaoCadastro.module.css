@@ -1,5 +1,6 @@
 .container {
-  background-color: black;
+  background-color: var(--bg-color);
+  height: 100%;
 }
 
 .main {
@@ -8,14 +9,15 @@
   display: flex;
   flex-direction: column;
   margin-top: 10vh;
-  color: white;
+  color: var(--opposite-color);
   gap: 5.02vh;
   font-weight: bold;
+  padding: 0 5vw;
 }
 
 .conclusionLogo {
   font-size: 2.75rem;
-  color: #ffffff;
+  color: var(--opposite-color);
   text-align: center;
   margin-bottom: 20px;
 }
@@ -24,29 +26,67 @@
   font-size: 1.6rem;
   text-align: center;
   line-height: 1.6;
-  color: #ffffff;
+  color: var(--opposite-color);
+  max-width: 800px;
 }
 
 .conclusionButton {
-    background-color: #ffff;
-    border: none;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 10px;
-    height: 8.2vh;
-    width: 14vw;   
-    margin-bottom: 5vh;
+  background-color: #fff;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  height: 8.2vh;
+  width: 14vw;
+  min-width: 150px;
+  max-width: 250px;
+  margin-bottom: 5vh;
+  margin-top: 4vh;
 }
 
 .conclusionButton:hover {
-    background-color: #FFD700;
-    color: black;
-    transition: 0.3s ease-in-out;
-    transform: scale(1.1);
+  background-color: #FFD700;
+  color: black;
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+  .conclusionLogo {
+    font-size: 2.2rem;
+  }
+
+  .conclusionText {
+    font-size: 1.4rem;
+    padding: 0 4vw;
+  }
+
+  .conclusionButton {
+    margin-bottom: 23vh;
+    width: 40vw;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .conclusionLogo {
+    font-size: 1.8rem;
+  }
+
+  .conclusionText {
+    font-size: 1.2rem;
+    padding: 0 2vw;
+  }
+
+  .conclusionButton {
+    width: 60vw;
+    font-size: 14px;
+    padding: 12px 24px;
+  }
 }
