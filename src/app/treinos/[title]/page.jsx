@@ -32,7 +32,7 @@ export default function TreinoDetails() {
 
             try {
                 setLoading(true);
-                const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+                const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://bodyhealthy-back.onrender.com";
 
                 // Decodificar o title da URL
                 const decodedTitle = decodeURIComponent(title);

@@ -29,9 +29,9 @@ export const login = async (credentials = {}) => {
   const { email, userName, password } = credentials;
 
   try {
-    const response = await apiClient.post("http://localhost:4000/auth/login", {
+    const response = await apiClient.post("https://bodyhealthy-back.onrender.com/auth/login", {
       email,
-      username: userName, // use 'username' as the key
+      userName,
       password,
     });
 

@@ -114,7 +114,7 @@ export default function Usuario() {
         }
         
         const userData = JSON.parse(userStr);
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://bodyhealthy-back.onrender.com";
         
         // Preparar dados para atualização conforme a estrutura do backend
         const updateData = {

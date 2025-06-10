@@ -26,7 +26,7 @@ const Treinos = () => {
 
             try {
                 setLoading(true);
-                const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+                const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://bodyhealthy-back.onrender.com";
 
                 // Incluir o token de autenticação no cabeçalho
                 const res = await axios.get(`${apiUrl}/training/${userName}`, {
