@@ -1,7 +1,7 @@
 import axios from "axios";
 
 // URL base da API
-const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4001";
+const API_URL = process.env.NEXT_PUBLIC_API_URL || "https://body-healthy.coolify.fps92.dev/";
 
 // Cliente axios com URL base configurada
 const apiClient = axios.create({
@@ -29,7 +29,7 @@ export const login = async (credentials = {}) => {
   const { email, userName, password } = credentials;
 
   try {
-    const response = await apiClient.post("https://bodyhealthy-back.onrender.com/auth/login", {
+    const response = await apiClient.post("https://body-healthy.coolify.fps92.dev/auth/login", {
       email,
       userName,
       password,

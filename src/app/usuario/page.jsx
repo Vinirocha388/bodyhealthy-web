@@ -49,7 +49,7 @@ export default function Usuario() {
         setEmail(userData.email || "");
         
         // Obter dados completos da API
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://body-healthy.coolify.fps92.dev/";
         
         const response = await axios.get(`${apiUrl}/user/${userData.userName}`, {
           headers: {
@@ -114,7 +114,7 @@ export default function Usuario() {
         }
         
         const userData = JSON.parse(userStr);
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://bodyhealthy-back.onrender.com";
+        const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://body-healthy.coolify.fps92.dev/";
         
         // Preparar dados para atualização conforme a estrutura do backend
         const updateData = {
@@ -209,7 +209,7 @@ export default function Usuario() {
       }
       
       const userData = JSON.parse(userStr);
-      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "http://localhost:4000";
+      const apiUrl = process.env.NEXT_PUBLIC_API_URL || "https://body-healthy.coolify.fps92.dev/";
       
       const response = await axios.get(`${apiUrl}/user/${userData.userName}`, {
         headers: {

@@ -58,7 +58,7 @@ export default function Login() {
           <div className={styles.textBox}>
             <input
               type="text"
-              placeholder="Endereço de e-mail ou nome de usuário"
+              placeholder="Coloque seu endereço de e-mail"
               className={styles.textBoxText}
               value={emailOrUsername}
               onChange={(e) => setEmailOrUsername(e.target.value)}
